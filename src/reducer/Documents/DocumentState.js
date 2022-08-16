@@ -59,6 +59,12 @@ const DocumentState = (props) => {
             image:templateImg,
             title:"Card title7",
             desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+         },
+         {
+            cardKey:10,
+            image:templateImg,
+            title:"Card title7",
+            desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
          }
     ]
     const [docs, setdocs] = useState(data)

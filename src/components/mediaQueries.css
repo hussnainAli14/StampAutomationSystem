@@ -1,4 +1,11 @@
 @media(min-width:500px) and (max-width: 600px){
+  .nav-text{
+
+    margin-left: 60px;
+    }
+    .active-link{
+      margin-right: 100px;
+    }
     /*Login*/
     .selection{
         width: 95%;
@@ -125,8 +132,11 @@
         }
         /*Notification Panel*/
         .notificationPanel{
-          height: 95vh;
           width: 45%;
+        }
+        /*user documents*/
+        .doc-card-style{
+          height: 300px;
         }
         /*vehicles agreement*/
         .AgreementBody{
@@ -281,6 +291,13 @@
 }
 
 @media (min-width:250px) and (max-width:350px){
+  .nav-text{
+
+    margin-left: 30px;
+    }
+    .active-link{
+      margin-right: 100px;
+    }
 /*main form*/
 .mainForm{
 margin-left: 10px;
@@ -492,7 +509,7 @@ margin-left: 10px;
   /*Signup Form*/
   .user-signup-img{
     margin-top: 0px;
-    height: 600px;
+    height: 700px;
   }
   .user_signup_form{
     position: absolute;
@@ -500,7 +517,7 @@ margin-left: 10px;
     left: 50%;
     transform: translate(-50% , -50%);
     width: 95%;
-    height: 92vh;
+    height: 95vh;
   }
   .signup-img{
     margin-left: 40%;
@@ -510,7 +527,7 @@ margin-left: 10px;
   }
   .user_verification_form{
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50% , -30%);
     width: 300px;
@@ -617,11 +634,12 @@ margin-top: 10px;
     width: 95%;
   }
   .userDocument{
-    height: 3000px;
-    background-color: #313b47;
+ background-color: #313b47;
   }
   .doc-card-style{
-    margin-left: 5px;
+    height: 300px;
+
+    margin-left: 0px;
   }
   .notificationPanel{
     margin-top: 100px;
@@ -640,6 +658,13 @@ margin-top: 10px;
   }
 }
 @media (min-width:350px) and (max-width:430px){
+  .nav-text{
+
+    margin-left: 40px;
+    }
+    .active-link{
+      margin-right: 100px;
+    }
   /*Main*/
   .mainForm{
     padding-right: 5%;
@@ -807,7 +832,7 @@ transform: translateY(-40%);
   margin-left: 20px;
 }
 .user_signup_form_input{
-width: 80%;
+width: 90%;
 }
 .btn-margin{
   margin-left: -26px;
@@ -826,8 +851,8 @@ width: 80%;
     top: 55%;
     left: 50%;
     transform: translate(-50% , -50%);
-    width: 95%;     
-    height: 95vh;
+    width: 95%; 
+    height: 95vh;    
   }
   .signup-img{
     margin-left: 100px; 
@@ -931,12 +956,13 @@ width: 80%;
       margin-left: 50%;
      }
      .userDocument{
-      height: 2600px;
+      
       background-color: #313b47;
       
     }
     .doc-card-style{
       /* border: none;*/
+      height: 300px;
       background-color: #313b47;
       margin-left: 15px;
     }
@@ -946,6 +972,13 @@ width: 95%;
 }
 
 @media (min-width:430px) and (max-width:500px){
+  .nav-text{
+
+    margin-left: 50px;
+    }
+    .active-link{
+      margin-right: 100px;
+    }
   .mainForm{
     margin-right: 30px;
   }
@@ -1063,6 +1096,8 @@ margin-left: -10px;   }
     height: 800px;
   }
   .user_signup_form{
+    height: 95vh;
+    width: 95%;
     top:50% ;
   }
   .verification_overlay{
@@ -1108,6 +1143,10 @@ margin-bottom: 70px;
  .tempInputs{
   width: 70%;
  }
+ /*user documents*/
+ .doc-card-style{
+  height: 300px;
+ }
  /*media recorder*/
  .recorder{
 height:300px;
@@ -1117,6 +1156,7 @@ height:300px;
   margin-left: 15%;
   width: 70%;
  }
+ 
  .recording-btn{
   /* width: 100%; */
   margin-left: 22%;
@@ -1358,8 +1398,8 @@ margin-top: -160px;
 .temp-btn{
   margin-top: 870px;
 }
-.userDocument{
-  min-height: 2200px;
+.doc-card-style{
+  height: 300px;
 }
 }
 

@@ -9,26 +9,17 @@ padding: 0 ;
 overflow:hidden;
 overflow-y: scroll;
 }
-/* .btn:active:focus{
-  color: white;
-} */
+
 .test-color{
   color:black
 }
 .notifications-icon{
   height: 2rem;
-  /* background-color: white; */
   border: none;
 }
-/* .ni{
-  /* height: 2rem; */
- 
-/* ul li:hover{
-color:#00C8AA;
-} */
-/* Link:visited{
-color:#00C8AA;
-} */
+.logOut-icon:hover{
+outline: none;
+}
 
 .selection{
   position: relative;
@@ -55,6 +46,7 @@ margin-left: 160px;
   border-bottom: 4px solid #6351ce;
   border-radius: 3px;
   font-weight: bold;
+
 }
 .user-portion{
   position: absolute;
@@ -1027,7 +1019,7 @@ font-weight: bold;
 
 .userDocument{
   background-color: #313b47;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 .doc-card-style{
   
@@ -1495,7 +1487,6 @@ margin-top: -9rem;}
   background-color: #2b4c65;
   color: white;
   border: 2px solid #2b4c65;
-  height: 89vh;
   width: 25%;
 border-radius: 25px;
 /* overflow-y: scroll; */

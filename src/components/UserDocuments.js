@@ -12,7 +12,7 @@ const UserDocuments = () => {
     <div className='row navbar-margin userDocument' >
       {
         docs.map((doc)=>{
-          return <div className='col-lg-4 col-md-6' key={doc.cardKey}>
+          return <div className='col-lg-4 col-md-6 col-xs-1' key={doc.cardKey}>
           <UserDocumentItems image={doc.image} title={doc.title} desc = {doc.desc} />
           
           </div>

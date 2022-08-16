@@ -5,6 +5,7 @@ import { Badge } from '@mui/material';
 import { userContext } from '../App'
 import Notifications from './Notifications';
 import NavIcon from '../images/navIcon.png'
+import LogoutIcon from '@mui/icons-material/Logout';
 const Navbar = () => {
   const [Notificationbar, setNotificationbar] = useState(false)
   let location = useLocation();
@@ -49,7 +50,7 @@ const Navbar = () => {
      (state === 'user')&&
       <form className="d-flex" >
       <Link className="btn btn-outline-primary mx-2 rounded-pill" to='/userdocs'>My Documents</Link>
-      <Link className='btn btn-outline-primary rounded-pill' to='/main'>LogOut</Link>
+      <Link className='btn logOut-icon' to='/main'><LogoutIcon/></Link>
       </form>}
       {(state === 'lawyer')&&
       <form className="d-flex" onSubmit={handler}>
@@ -64,7 +65,7 @@ const Navbar = () => {
       
       </button>
       <Link className="btn btn-outline-primary mx-2 rounded-pill" to='/userdocs'>My Documents</Link>
-      <Link className='btn btn-outline-primary rounded-pill' to='/main'>LogOut</Link>
+      <Link className='btn' to='/main'><LogoutIcon/></Link>
       </form>
 }
 {/*  */}
