@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/StampAutomationSystem/static/css/main.7cfa834c.css",
+    "main.js": "/StampAutomationSystem/static/js/main.a54ce39f.js",
+    "static/js/498.21d60a07.chunk.js": "/StampAutomationSystem/static/js/498.21d60a07.chunk.js",
+    "static/js/703.5f1c7695.chunk.js": "/StampAutomationSystem/static/js/703.5f1c7695.chunk.js",
+    "static/js/513.93e2e711.chunk.js": "/StampAutomationSystem/static/js/513.93e2e711.chunk.js",
+    "static/js/787.bd02f72e.chunk.js": "/StampAutomationSystem/static/js/787.bd02f72e.chunk.js",
+    "static/media/ready.jpg": "/StampAutomationSystem/static/media/ready.c0275c108a51f9069cc6.jpg",
+    "static/media/template0.png": "/StampAutomationSystem/static/media/template0.56b87330950b8756820e.png",
+    "static/media/login-form-pic.jpg": "/StampAutomationSystem/static/media/login-form-pic.88a59a5cfeb646f84360.jpg",
+    "static/media/login-img.jpg": "/StampAutomationSystem/static/media/login-img.8c7e5311b79cc5fee2bb.jpg",
+    "static/media/vehiclesAgreement.png": "/StampAutomationSystem/static/media/vehiclesAgreement.f4acf81a339a20af0bee.png",
+    "static/media/rentAgreement.png": "/StampAutomationSystem/static/media/rentAgreement.3250760a6bca6dcd1db3.png",
+    "static/media/mainFirstPic.png": "/StampAutomationSystem/static/media/mainFirstPic.f526b24695ece453eca5.png",
+    "static/media/propertyAgreement.png": "/StampAutomationSystem/static/media/propertyAgreement.63473f49ec4b184b563c.png",
+    "static/media/fillBlanks.png": "/StampAutomationSystem/static/media/fillBlanks.50067004b20f0968724d.png",
+    "static/media/hitDownload.png": "/StampAutomationSystem/static/media/hitDownload.5d61ec56bdcce74db4a2.png",
+    "static/media/undertaking1.png": "/StampAutomationSystem/static/media/undertaking1.29c48ccb8ad9f33b613d.png",
+    "static/media/picktemplate.png": "/StampAutomationSystem/static/media/picktemplate.023e9f06c389d080c78d.png",
+    "static/media/jazzcash.jfif": "/StampAutomationSystem/static/media/jazzcash.1a2d6cda0400a5159847.jfif",
+    "static/media/man.png": "/StampAutomationSystem/static/media/man.425bf2fdb884d114f291.png",
+    "static/media/paymentEasypaisa.jfif": "/StampAutomationSystem/static/media/paymentEasypaisa.6deb4720815c91d21e34.jfif",
+    "static/media/insertImage1.jpg": "/StampAutomationSystem/static/media/insertImage1.0f65ba5d880819163da2.jpg",
+    "static/media/lawyer.png": "/StampAutomationSystem/static/media/lawyer.09824ef3e837f4e3ceec.png",
+    "static/media/userRegister.jpg": "/StampAutomationSystem/static/media/userRegister.4518f9e8e99af76e0447.jpg",
+    "static/media/templateHeadingImg.png": "/StampAutomationSystem/static/media/templateHeadingImg.5532634448c10ae755a7.png",
+    "static/media/bill.jfif": "/StampAutomationSystem/static/media/bill.2ab033901e58ae7dbac3.jfif",
+    "index.html": "/StampAutomationSystem/index.html",
+    "main.7cfa834c.css.map": "/StampAutomationSystem/static/css/main.7cfa834c.css.map",
+    "main.a54ce39f.js.map": "/StampAutomationSystem/static/js/main.a54ce39f.js.map",
+    "498.21d60a07.chunk.js.map": "/StampAutomationSystem/static/js/498.21d60a07.chunk.js.map",
+    "703.5f1c7695.chunk.js.map": "/StampAutomationSystem/static/js/703.5f1c7695.chunk.js.map",
+    "513.93e2e711.chunk.js.map": "/StampAutomationSystem/static/js/513.93e2e711.chunk.js.map",
+    "787.bd02f72e.chunk.js.map": "/StampAutomationSystem/static/js/787.bd02f72e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cfa834c.css",
+    "static/js/main.a54ce39f.js"
+  ]
+}
