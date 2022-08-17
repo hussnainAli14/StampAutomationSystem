@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/StampAutomationSystem/static/css/main.d89047ed.css",
-    "main.js": "/StampAutomationSystem/static/js/main.1957d46b.js",
+    "main.css": "/StampAutomationSystem/static/css/main.af8e5109.css",
+    "main.js": "/StampAutomationSystem/static/js/main.77cc3804.js",
     "static/js/498.21d60a07.chunk.js": "/StampAutomationSystem/static/js/498.21d60a07.chunk.js",
     "static/js/703.5f1c7695.chunk.js": "/StampAutomationSystem/static/js/703.5f1c7695.chunk.js",
     "static/js/513.93e2e711.chunk.js": "/StampAutomationSystem/static/js/513.93e2e711.chunk.js",
@@ -21,21 +21,22 @@
     "static/media/jazzcash.jfif": "/StampAutomationSystem/static/media/jazzcash.1a2d6cda0400a5159847.jfif",
     "static/media/man.png": "/StampAutomationSystem/static/media/man.425bf2fdb884d114f291.png",
     "static/media/paymentEasypaisa.jfif": "/StampAutomationSystem/static/media/paymentEasypaisa.6deb4720815c91d21e34.jfif",
+    "static/media/mainbackground.jpeg": "/StampAutomationSystem/static/media/mainbackground.4d975b63129b4f8c2e40.jpeg",
     "static/media/insertImage1.jpg": "/StampAutomationSystem/static/media/insertImage1.0f65ba5d880819163da2.jpg",
     "static/media/lawyer.png": "/StampAutomationSystem/static/media/lawyer.09824ef3e837f4e3ceec.png",
     "static/media/userRegister.jpg": "/StampAutomationSystem/static/media/userRegister.4518f9e8e99af76e0447.jpg",
     "static/media/templateHeadingImg.png": "/StampAutomationSystem/static/media/templateHeadingImg.5532634448c10ae755a7.png",
     "static/media/bill.jfif": "/StampAutomationSystem/static/media/bill.2ab033901e58ae7dbac3.jfif",
     "index.html": "/StampAutomationSystem/index.html",
-    "main.d89047ed.css.map": "/StampAutomationSystem/static/css/main.d89047ed.css.map",
-    "main.1957d46b.js.map": "/StampAutomationSystem/static/js/main.1957d46b.js.map",
+    "main.af8e5109.css.map": "/StampAutomationSystem/static/css/main.af8e5109.css.map",
+    "main.77cc3804.js.map": "/StampAutomationSystem/static/js/main.77cc3804.js.map",
     "498.21d60a07.chunk.js.map": "/StampAutomationSystem/static/js/498.21d60a07.chunk.js.map",
     "703.5f1c7695.chunk.js.map": "/StampAutomationSystem/static/js/703.5f1c7695.chunk.js.map",
     "513.93e2e711.chunk.js.map": "/StampAutomationSystem/static/js/513.93e2e711.chunk.js.map",
     "787.bd02f72e.chunk.js.map": "/StampAutomationSystem/static/js/787.bd02f72e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d89047ed.css",
-    "static/js/main.1957d46b.js"
+    "static/css/main.af8e5109.css",
+    "static/js/main.77cc3804.js"
   ]
 }
