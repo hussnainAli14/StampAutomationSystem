@@ -1249,7 +1249,7 @@ margin-bottom: 24px;
 .defaultStylingAgreement{
   position: absolute;
  margin-top: 80px;
- min-height: 1520px;
+ /* min-height: 1520px; */
  width: 66%;
  margin-left: 18%;
  background-color: aliceblue;
@@ -1511,7 +1511,7 @@ float:right;
 /*account verification*/
 .accver{
   background-image:linear-gradient(to right bottom , #0d666e,#639293);
-  height: 1500px;
+  /* height: 1500px; */
   }
 .cardDetails{
   height: 208px;

@@ -116,9 +116,7 @@
           width: 500px;
         }
         /*account verification*/
-        .accver{
-          height: 1650px;
-        }
+       
         .card-margin{
           margin-left: -15px;
           margin-bottom: 60px;
@@ -297,6 +295,28 @@
     }
     .active-link{
       margin-right: 100px;
+    }
+    /*Payment Address*/
+    .payment{
+      height: 1200px;
+    }
+    .payment-method{
+      margin-left: 17px;
+      width: 90%;
+
+    }
+    .account-info{
+      margin-left: 15px;
+      width: 90%;
+    }
+    .payment-input{
+      margin-left: 10%;
+    }
+    .payment-label{
+      margin-left: 10%;
+    }
+    .payment-btn{
+      margin-left: 30%;
     }
 /*main form*/
 .mainForm{
@@ -551,7 +571,6 @@ margin-left: 10px;
     margin-left: 9px;
     width: 95%;
    margin-top: 80px;
-   height: 3500px;
   }
   .userDetails{
     margin-bottom: 200px;
@@ -570,6 +589,7 @@ margin-left: 10px;
   .qrcode{
     margin-left: 35%;
 margin-top: 10px;
+margin-bottom: 30px;
   }
   #RentAgreement{
     height: 3600px;
@@ -607,13 +627,19 @@ margin-top: 10px;
   #AddressInput{
     margin-left: 55px;
   }
+  .tempInputs{
+    width: 70%;
+  }
+  #AddressInput3{
+    width: 70%;
+  }
   /*account verification*/
   .cardDetails{
    width: 100%;
   }
-  .accver{
+  /* .accver{
     height: 2300px;
-  }
+  } */
   
   .account-cardbtn-1{
     margin-bottom: 200px;
@@ -645,6 +671,15 @@ margin-top: 10px;
     margin-top: 100px;
     width: 95%;
   }
+  .witness-oath{
+    margin-left: 15px;
+    width: 95%;
+  }
+  .witness-oath-text{
+    margin-top: -15px;
+    margin-left: 10px;
+    width: 90%;
+  }
   .recording-btn{
     margin-left: 10%;
   }
@@ -665,8 +700,49 @@ margin-top: 10px;
     .active-link{
       margin-right: 100px;
     }
+    /*Payment*/
+    .payment{
+      height: 1200px;
+    }
+    .payment-method{
+      margin-left: 17px;
+      width: 95%;
+    }
+    .account-info{
+      margin-left: 25px;
+      width: 90%;
+    }
+    .payment-input{
+      margin-left: 10%;
+    }
+    .payment-label{
+      margin-left: 10%;
+    }
+    /*media recorder*/
+    .media-recorder{
+      height: 1000px;
+    }
+    .witness-oath{
+      width: 95%;
+      margin-left: 15px;
+    }
+    .witness-oath-text{
+      margin-top: -12px;
+      width: 90%;
+      margin-left: 10px;
+    }
+    .recording-btn{
+      margin-left: 10%;
+    }
+    .screen{
+      margin-top: -50px;
+      margin-left: -20px;
+      width: 90%;
+      height: 300px;
+    }
   /*Main*/
-  .mainForm{
+  .mainForm
+  {
     padding-right: 5%;
   }
   .mainForm_heading{
@@ -843,16 +919,17 @@ width: 90%;
   padding: 4px 2px;
 }
   .user-signup-img{
-    margin-top: 0px;
-    height: 600px;
+    margin-top: 64px;
+    height: 700px;
   }
   .user_signup_form{
     position: absolute;
     top: 55%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    /* transform: translate(-50% , -50%); */
     width: 95%; 
-    height: 95vh;    
+    height: 500px;    
+    margin-bottom: 70px;
   }
   .signup-img{
     margin-left: 100px; 
@@ -866,9 +943,7 @@ width: 90%;
       width: 100%;
       height:115vh;
     }
-    .accver{
-      height: 2500px;
-    }
+   
     .cardDetails{
       margin-left: 10px;
     }
@@ -912,19 +987,30 @@ width: 90%;
     #AddressInput{
        margin-left: 55px;
     }
+    .tempInputs{
+      width: 70%;
+    }
+    #AddressInput3{
+      width: 70%;
+    }
     .personAddressContent{
       width: 85%;
     }
      /*agreement*/
      .AgreementBody{
-      height: 3000px;
+      height: 3300px;
      }
      .defaultStylingAgreement{
-      height: 2900px;
+      margin-left: 10px;
+      width: 95%;
+      height: 3100px;
+     }
+     .undertakingContent{
+      margin-top: 550px;
      }
      .agreement-btn{
-      
-      margin-top: 2500px;
+      margin-left: 17%;
+      margin-top: 2700px;
      }
      .temp-btn-download{
       margin-left: 45%;
@@ -934,10 +1020,11 @@ width: 90%;
       margin-top: 30px;
      }
      #RentAgreement{
-      height: 2900px;
+      height: 3200px;
      }
      .agreement-btn-rent{
-      margin-top: 2550px;
+      margin-top: 2850px;
+      margin-left: 15%;
      }
      .temp-btn-download-rent{
       margin-left: 55%;
@@ -947,10 +1034,13 @@ width: 90%;
       height: 2000px;
      }
      .defaultStyling{
-      height: 1800px;
+      margin-left: 10px;
+      width: 95%;
+      height: 1900px;
      }
      .temp-btn{
-      margin-top: 1400px;
+      margin-left: 17%;
+      margin-top: 1550px;
      }
      .temp-btn-download{
       margin-left: 50%;
@@ -1093,12 +1183,14 @@ margin-left: -10px;   }
   }
   /*Signup*/
   .user-signup-img{
+    margin-top: 64px;
     height: 800px;
   }
   .user_signup_form{
-    height: 95vh;
-    width: 95%;
+    height: 600px;
+    width: 85%;
     top:50% ;
+    margin-bottom: 70px;
   }
   .verification_overlay{
     top: 30%;
@@ -1108,9 +1200,6 @@ margin-left: -10px;   }
     width: 95%;
   }
   /*Account Verification*/
-  .accver{
-    height: 2500px;
-  }
   .card-margin{
 margin-left: 70px;
 margin-bottom: 70px;
