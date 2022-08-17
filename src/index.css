@@ -236,7 +236,7 @@ background-color: #36454F;
 }
 .form-icon{
   margin-left: 312px;
-  transform: translateY(-32px);
+  transform: translateY(-17px);
   cursor: pointer;
 }
 .ml{
@@ -503,23 +503,29 @@ background-color: #6351ce;
   margin-bottom: -0.1rem;
 }
 /*Main.js*/
-
+.bgImg{
+  background-image: url('./images/mainbackground.jpeg');
+  background-position:center;
+}
 .mainForm{
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 120px;
+ 
 }
 .mainForm_heading{
   padding-top: 30px;
   padding-right:35%;
 }
 .first-section{
+ 
   margin-top: 32px;
+  
 }
 .headings{
   margin-top: 50px;
   padding-right: 70%;
-  
+
 }
 
 .mainFormbtn-1{
@@ -531,6 +537,7 @@ background-color: #6351ce;
   border-radius: 15px ;
   margin-top: 15px;
   box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.5) ;
+  
 }
 .mainFormbtn-1:hover{
 transform: translateY(-3px);

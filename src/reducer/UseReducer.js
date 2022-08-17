@@ -6,6 +6,9 @@ export const reducer = (state, action)=>{
     else if(action.type === "lawyer"){
         return action.payload
     }
+    else if(action.type === "none"){
+        return action.payload
+    }
     return state
 }
 

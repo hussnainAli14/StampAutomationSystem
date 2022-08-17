@@ -14,6 +14,10 @@ const Navbar = () => {
   }
   // eslint-disable-next-line no-unused-vars
   const {state, dispatch}= useContext(userContext)
+  const navChanger = ()=>{
+    // eslint-disable-next-line no-unused-vars
+    dispatch ({type:'none', payload:'none'})
+  }
   const handler =(event)=>{
     event.preventDefault();
 }
@@ -50,7 +54,7 @@ const Navbar = () => {
      (state === 'user')&&
       <form className="d-flex" >
       <Link className="btn btn-outline-primary mx-2 rounded-pill" to='/userdocs'>My Documents</Link>
-      <Link className='btn logOut-icon' to='/main'><LogoutIcon/></Link>
+      <Link className='btn logOut-icon' to='/main'><LogoutIcon onClick={navChanger}/></Link>
       </form>}
       {(state === 'lawyer')&&
       <form className="d-flex" onSubmit={handler}>
@@ -65,7 +69,7 @@ const Navbar = () => {
       
       </button>
       <Link className="btn btn-outline-primary mx-2 rounded-pill" to='/userdocs'>My Documents</Link>
-      <Link className='btn' to='/main'><LogoutIcon/></Link>
+      <Link className='btn' to='/main'><LogoutIcon onClick={navChanger}/></Link>
       </form>
 }
 {/*  */}

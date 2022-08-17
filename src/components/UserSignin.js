@@ -87,10 +87,10 @@ const navChanger = ()=>{
         </Modal.Footer>
       </Modal>
       
-            {location.pathname === "/Login"?<span className='ml'>Haven't created an account?</span>:""}<br/>
+            {location.pathname === "/Login"?<p className='ml'>Haven't created an account?</p>:""}<br/>
             
             <div className='my-2 text-center'>
-            {location.pathname === "/Login"?<Link className='mt-1 btn btn-outline-primary rounded-pill 'to="/UserSignup" >Register</Link>:""}
+            {location.pathname === "/Login"?<Link className='btn btn-outline-primary rounded-pill 'to="/UserSignup" >Register</Link>:""}
             
             </div>
             

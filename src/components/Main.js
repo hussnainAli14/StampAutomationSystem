@@ -5,7 +5,8 @@ import mainFirstPic from '../images/mainFirstPic.png'
 import vehiclesAgreement from '../images/vehiclesAgreement.png'
 import rentAgreement from '../images/rentAgreement.png'
 import propertyAgreement from '../images/propertyAgreement.png'
-// import test from '../images/template0.png'
+
+// import test from '../images/template0.png
 const Main = () => {
   // eslint-disable-next-line no-unused-vars
   const {state, dispatch}= useContext(userContext)

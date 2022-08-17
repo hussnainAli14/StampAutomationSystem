@@ -289,6 +289,10 @@
 }
 
 @media (min-width:250px) and (max-width:350px){
+  /*Terma and condition*/
+  .terms-text{
+    padding: 25px 50px;
+  }
   .nav-text{
 
     margin-left: 30px;
@@ -529,7 +533,7 @@ margin-left: 10px;
   /*Signup Form*/
   .user-signup-img{
     margin-top: 0px;
-    height: 700px;
+    height: 800px;
   }
   .user_signup_form{
     position: absolute;
@@ -537,7 +541,7 @@ margin-left: 10px;
     left: 50%;
     transform: translate(-50% , -50%);
     width: 95%;
-    height: 550px;
+    height: 650px;
   }
   .signup-img{
     margin-left: 40%;
@@ -693,6 +697,10 @@ margin-bottom: 30px;
   }
 }
 @media (min-width:350px) and (max-width:430px){
+  /*Terms and conditions*/
+  .terms-text{
+    padding: 25px 50px;
+  }
   .nav-text{
 
     margin-left: 40px;
@@ -894,14 +902,14 @@ margin-bottom: 30px;
   margin-left: -4px;
 }
 .login-image-box{
-width: 53%;
+display: none;
 }
 .login-form-box{
-  left: 52%;
-  width: 60%;
+  left: 15%;
+  width: 80%;
 }
 .form-icon{
-  margin-left: 165px;
+  margin-left: 94%;
 transform: translateY(-40%);
 }
 .ml{
@@ -920,7 +928,7 @@ width: 90%;
 }
   .user-signup-img{
     margin-top: 64px;
-    height: 700px;
+    height: 800px;
   }
   .user_signup_form{
     position: absolute;
@@ -928,7 +936,7 @@ width: 90%;
     left: 50%;
     /* transform: translate(-50% , -50%); */
     width: 95%; 
-    height: 500px;    
+    height: 600px;    
     margin-bottom: 70px;
   }
   .signup-img{
@@ -1164,9 +1172,16 @@ margin-left: -10px;   }
   .login-box{
     width: 90%;
   }
+  .login-image-box{
+    display: none;
+  }
+  .login-form-box{
+    margin-left: -45%;
+    width: 80%;
+  }
   .form-icon{
-    margin-left: 215px;
-    transform: translateY(-15px);
+    margin-left: 94%;
+    transform: translateY(-5px);
   }
   .fp{
     margin-left: 30px;
@@ -1323,6 +1338,9 @@ height:300px;
 }
 
 @media (min-width:768px) and (max-width:1024px){
+  .terms-text{
+    padding: 25px 100px;
+  }
   .headings-img{
     float:right;
     height:300px;
@@ -1401,7 +1419,7 @@ height:300px;
   }
   /*Signup*/
   .user-signup-img{
-    height: 700px;
+    height: 1000px;
   }
   /*Verification*/
   .verification_overlay{
