@@ -11,7 +11,7 @@ const Templates = () => {
         cardKey:1,
        image: vehiclesAgreement,
        title:"Vehicles Sale Agreement",
-       
+       desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
      },
      {
         cardKey:2,
@@ -25,7 +25,13 @@ const Templates = () => {
         image:rentAgreement,
         title:"Property Rent Agreement",
         desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
-     }
+     },
+     {
+      cardKey:4,
+      image:rentAgreement,
+      title:"Property Rent Agreement",
+      desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+   }
      
     ]
 
@@ -42,10 +48,22 @@ const Templates = () => {
          image:Undertaking1,
          title:"Affidavet for Institues",
          desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
-      }
+      },
+      {
+        cardKey:7,
+        image:Undertaking1,
+        title:"Affidavet for Institues",
+        desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+     },
+     {
+      cardKey:8,
+      image:Undertaking1,
+      title:"Affidavet for Institues",
+      desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+   }
     ]
   return (
-    <>
+    <div className='templatePage'>
     <div>
         <h1 className='template-heading text-center '>Stamp Paper Templates</h1>
         <div className='template-info-div d-flex'>
@@ -61,7 +79,7 @@ const Templates = () => {
     </div>
     
     <div className='row template-style'>
-    <h2 className='text-center mt-5 fw-bold fs-italic mb-5'>Sale/Purchase/Rent Stamp Templates</h2>
+    <h2 className='text-center mt-5 fw-bold fs-italic '>Sale/Purchase/Rent Stamp Templates</h2>
         {template.map((element)=>{
           return <div className='col-lg-4 col-md-6' key={element.cardKey}>
           <TemplatesItem image={element.image} title={element.title} desc={element.desc}  />
@@ -72,8 +90,8 @@ const Templates = () => {
     
     </div>
      
-    <div className='row template-style'>
-    <h2 className='text-center fw-bold mb-5'>UnderTakings / Affidavets</h2>
+    <div className='row template-style pb-5'>
+    <h2 className='text-center fw-bold '>UnderTakings / Affidavets</h2>
         {affidavet.map((element)=>{
           return <div className='col-lg-4 col-md-6' key={element.cardKey}>
           <TemplatesItem image={element.image} title={element.title} desc={element.desc}  />
@@ -83,7 +101,7 @@ const Templates = () => {
     
     
     </div>
-    </>
+    </div>
   )
 }
 

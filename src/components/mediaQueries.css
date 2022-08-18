@@ -269,10 +269,7 @@
         .downloadTemplate-img{
           margin-top: 20px;
         }
-        .ready{
-          height: 560px;
-          margin-bottom: 30px;
-        }
+        
         .ready-text{
           padding: 48px 20px;
         }
@@ -323,10 +320,13 @@
       margin-left: 30%;
     }
 /*main form*/
+.mainBg{
+  margin-bottom: 0px;
+}
 .mainForm{
 margin-left: 10px;
   margin-right: 10px;
-  
+  margin-bottom: 0px;
 }
 .mainForm_heading{
     padding-right:0%;
@@ -434,8 +434,8 @@ margin-left: 10px;
   }
   .ready{
     margin-top: 80px;
-    height: 400px;
-    margin-bottom: 100px;
+    /* height: 450px; */
+    margin-bottom: 0px;
   }
   .ready-text{
     padding: 48px 20px;
@@ -847,7 +847,6 @@ margin-bottom: 30px;
   }
   .ready{
     margin-top: 80px;
-    height: 530px;
     width:100%;
   }
   .ready-text{
@@ -1382,9 +1381,9 @@ height:300px;
     margin-left: 30px;
     width: 85%;
   }
-  .ready{
+  /* .ready{
     height: 750px;
-  }
+  } */
   .ready-text{
     padding: 48px 200px;
   }

@@ -37,6 +37,7 @@ import PropertySaleAgreement from './components/PropertySaleAgreement';
 import RentAgreement from './components/RentAgreement';
 import LawyerDocuments from './components/LawyerDocuments';
 import Notifications from './components/Notifications';
+import CardRotator from './components/CardRotator';
 // import { Scrollbars } from 'react-custom-scrollbars-2';
 
 // import downloadAndQe from './components/downloadAndQe';
@@ -62,7 +63,7 @@ function App() {
         <Navbar/>
         
      <Routes>
-      
+     <Route path='/rotator' element={<CardRotator />}/>
      <Route index element={<Main />}/>
      <Route path='/main' element={<Main />}/>
     <Route path="/about" element={<AboutUs />}/>

@@ -11,7 +11,12 @@ const Main = () => {
   // eslint-disable-next-line no-unused-vars
   const {state, dispatch}= useContext(userContext)
   return (
-    <div className='mainForm'>
+    <div className='mainBg' >
+    {/* >
+      <div className='FirstSection'>
+      <h1 className=' first-heading text-center'>Stamp Automation System</h1>
+      </div> */}
+      <div className='mainForm'>
     <div className='main' >
        <h1 className='mainForm_heading'>The online stamp paper website helps you to make stamp paper at home with full security of your data</h1>
     </div>
@@ -20,11 +25,11 @@ const Main = () => {
         <h4>Build your stamp agreements in a shorter time at home</h4>
         <h4><b>Try it for free</b></h4>
         {!state?<Link className='mainFormbtn-1'to='/templates'>Get Started Now </Link>:<Link className='mainFormbtn-1'to='/templates'>Build Stamp Agreement </Link>}
-        </div>
-        <div className='headings-img'>
+        </div> 
+         <div className='headings-img'>
  <img src={mainFirstPic} alt='loading' className='mainImage'/>
-        </div>
-    </section>
+        </div> 
+     </section>
     <section className='mainForm_templates'>
       <div >
       <h2 className='mfth'><b>Agreement Templates of every category</b></h2>
@@ -140,6 +145,7 @@ const Main = () => {
     </div> 
           
     </section>
+    </div>
     </div>
   )
 }
