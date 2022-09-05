@@ -61,6 +61,7 @@ const PersonAddress = () => {
                 isSubmitting,
 
             }) => (
+                <div className='AddressBg'>
     <div className='personAddress'> 
          <section className='personAddressContent'>
             <h2 className='mb-5 text-center mt-5 fw-bold' id='h2'>Add Buyer's Information</h2>
@@ -74,7 +75,7 @@ const PersonAddress = () => {
         { pressed && <section className='personAddressContent' id='personAddressMagrin'>
             <div><h2 className='mb-5 text-center mt-5 fw-bold'>Add Witness's Information</h2>
             <label className='fw-bold mb-3 ms-5'>Seller's Witness Account Name:</label>
-            <input name='sellerWitnessAccName' className='ms-5 tempInputs bg-white' id='AddressInput3' value={!Checked?values.sellerWitnessAccName:value} type='text'/><br/>
+            <input name='sellerWitnessAccName' className='tempInputs bg-white' id='AddressInput3' value={!Checked?values.sellerWitnessAccName:value} type='text'/><br/>
             <label className='fw-bold mb-3 ms-5'>Seller's Witness Public Key:</label>
             <input name='sellerWitnessKey' className='mx-5 tempInputs bg-white' id='AddressInput3' value={!Checked?values.sellerWitnessKey:value} type='text'/><br/>
             </div>
@@ -85,7 +86,7 @@ const PersonAddress = () => {
   </label>
   <input name='sellerWitnessEmail' className='ms-5 mb-5 pe-1 tempInputs bg-white' id='AddressInput3' type='text'/>
             <label className='fw-bold mb-3 ms-5'>Buyer's Witness Account Name:</label>
-            <input name='buyerWitnessAccName' className='ms-5 tempInputs bg-white' id='AddressInput3' value={!CheckedBuyer?values.buyerWitnessAccName:value} onChange={handleChange} type='text'/><br/>
+            <input name='buyerWitnessAccName' className='tempInputs bg-white' id='AddressInput3' value={!CheckedBuyer?values.buyerWitnessAccName:value} onChange={handleChange} type='text'/><br/>
             <label className='fw-bold mb-3 ms-5'>Buyer's Witnees Public Key:</label>
             <input name='buyerWitnessKey' className='mx-5 tempInputs bg-white' id='AddressInput3' value={!CheckedBuyer?values.buyerWitnessKey:value} type='text' onChange={handleChange}/><br/>
             <input class="form-check-input ms-5" type="checkbox" value="" id="flexCheckDefault" onClick={()=>setCheckedBuyer(true)}/>
@@ -96,6 +97,7 @@ const PersonAddress = () => {
   <input name='sellerWitnessEmail' className='mx-5 mb-5 tempInputs bg-white' id='AddressInput3' type='text'/>
             <button className='btn address-btn mb-5' >Send</button>
          </section>}
+    </div>
     </div>
     )}
     </Formik>

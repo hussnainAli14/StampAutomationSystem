@@ -4,6 +4,8 @@ import { Formik } from 'formik';
 import { Link } from 'react-router-dom'
 import { jsPDF } from "jspdf";
 import QRCode from "react-qr-code";
+// import { BiArrowToRight } from "react-icons/bi";
+
 const VehiclesAgreement = () => {
     const validate = yup.object({
         Name: yup.string().required('Required'),
@@ -82,16 +84,16 @@ const VehiclesAgreement = () => {
                                     <input name='Name' className='tempInputs' type='text' placeholder='Full Name' onChange={handleChange} onBlur={handleBlur}
                                         value={values.Name} /><br />
                                     <p className="tempErrors p-margin" > {errors.Name && touched.Name && errors.Name}</p><br /></div>
-                            
-                            
+
+
                                 <div className='col-md-3'><label className={errors.FatherName && touched.FatherName ? 'tempErrors label-marign tempLabels' : 'tempLabels'}>Father Name:</label><br /></div>
                                 <div className='col-md-9'>
                                     <input name='FatherName' className='tempInputs' type='text' placeholder='Father Name' onChange={handleChange} onBlur={handleBlur}
                                         value={values.FatherName} /><br />
                                     <p className="tempErrors p-margin" > {errors.FatherName && touched.FatherName && errors.FatherName}</p><br />
                                 </div>
-                            
-                            
+
+
                                 <div className='col-md-3'>
                                     <label className={errors.CnicNo && touched.CnicNo ? 'tempErrors label-marign tempLabels' : 'tempLabels'}>Cnic No:</label><br />
                                 </div>
@@ -101,7 +103,7 @@ const VehiclesAgreement = () => {
                                     <p className="tempErrors p-margin" > {errors.CnicNo && touched.CnicNo && errors.CnicNo}</p><br />
 
                                 </div>
-                            
+
                                 <div className='col-md-3'>
                                     <label className={errors.desc && touched.desc ? 'tempErrors label-marign tempLabels' : 'tempLabels'}>Description:</label><br />
                                 </div>
@@ -110,7 +112,7 @@ const VehiclesAgreement = () => {
                                         value={values.desc} /><br />
                                     <p className="tempErrors p-margin" > {errors.desc && touched.desc && errors.desc}</p><br />
                                 </div>
-                        
+
                                 <div className='col-md-3'>
                                     <label className={errors.issueDate && touched.issueDate ? 'tempErrors label-marign tempLabels' : 'tempLabels'}>Issue Date:</label><br />
                                 </div>
@@ -141,20 +143,105 @@ const VehiclesAgreement = () => {
 
 
                                 </div>
-                                <span className='fw-bold mb-3' id='Signature'>Signature First Party:</span> <input className='contentInput mb-3' type='text' /><br />
+                                </div>
+                                {/* <span className='fw-bold mb-3' id='Signature'>Signature First Party:</span> <input className='contentInput mb-3' type='text' /><br />
                                 <span className='fw-bold mb-3 ' id='Signature'>Signature Second Party:</span> <input className='contentInput mb-3' type='text' /><br />
                                 <span className='fw-bold mb-3' id='Signature'>Signature First Party's Witness:</span> <input className='contentInput mb-3' type='text' /><br />
                                 <span className='fw-bold mb-3' id='Signature'>Signature Second Party's Witness:</span> <input className='contentInput mb-3' type='text' /><br/>
-                                <span className='fw-bold mb-3' id='Signature'>Lawyer's Signature:</span> <input className='contentInput mb-3' type='text' />
-                            </div>
+                                <span className='fw-bold mb-3' id='Signature'>Lawyer's Signature:</span> <input className='contentInput mb-3' type='text' /> */}
+                                <div className='row userDetails'>
 
-                            <div>
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>Seller's Signature:</label><br /></div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Sign</button>
+                                       </div>
 
-                            </div>
+
+                                       </div>
+                                       </div>
+                                    <div className='col-md-4'><label className='tempLabels'>Buyer's Public Address</label><br /></div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       </div>
+
+
+                                       </div>
+                                    </div>
+
+
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>First Witness Public Address:</label><br />
+                                    </div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' placeholder='You can also write email address of witness' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       
+                                       </div>
+
+
+                                       </div>
+
+                                    </div>
+
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>Second Witness Public Address:</label><br />
+                                    </div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' placeholder='You can also write email address of witness' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       </div>
+
+
+                                       </div>
+
+                                    </div>
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>Lawyer's Signature:</label><br />
+                                    </div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       </div>
+
+
+                                       </div>
+
+                                    </div>
+                                </div>
+
+                            
                             <div className=' row d-flex'>
                                 <div><Link className='btn agreement-btn' to='/personaddress'>Submit</Link> </div>
-                            <div><button className='btn temp-btn-download' onClick={pdfGenerator}>Download</button></div>
-                            
+                                <div><button className='btn temp-btn-download' onClick={pdfGenerator}>Download</button></div>
+
                             </div>
                             <QRCode className='qrcode' size={128} value="hey" />
                         </form>

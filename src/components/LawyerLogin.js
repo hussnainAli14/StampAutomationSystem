@@ -30,7 +30,7 @@ export const LawyerLogin = ({sethideLawyerform}) => {
                
             </div>
             <div className='login-form-box'>
-            {location.pathname === '/Login'?<FaTimes className='form-icon' onClick={()=>sethideLawyerform(true)} />:""}
+            {location.pathname === '/Login'?<FaTimes className='form-iconLawyer' onClick={()=>sethideLawyerform(true)} />:""}
                   <form>
                   <div className='image-size img-margin'>
             <img src={lawyerImage} alt='loading'/>

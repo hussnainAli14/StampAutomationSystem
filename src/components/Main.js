@@ -1,10 +1,12 @@
 import {React,useContext} from 'react'
 import {Link} from 'react-router-dom'
 import { userContext } from '../App'
-import mainFirstPic from '../images/mainFirstPic.png'
+// import mainFirstPic from '../images/mainFirstPic.png'
+import readyImg from '../images/ready.jpg'
 import vehiclesAgreement from '../images/vehiclesAgreement.png'
 import rentAgreement from '../images/rentAgreement.png'
 import propertyAgreement from '../images/propertyAgreement.png'
+// import MainVideo from '../images/video3.mp4'
 
 // import test from '../images/template0.png
 const Main = () => {
@@ -17,19 +19,34 @@ const Main = () => {
       <h1 className=' first-heading text-center'>Stamp Automation System</h1>
       </div> */}
       <div className='mainForm'>
+      
+      {/* <div className='bg-video'>
+         <video className='bg-video-content' autoPlay loop muted>
+           <source src={MainVideo} type='video/mp4'/>
+         </video>
+        </div> */}
+        {/* <div className='ccvv'> */}
+        <section className='first-section'>
     <div className='main' >
        <h1 className='mainForm_heading'>The online stamp paper website helps you to make stamp paper at home with full security of your data</h1>
     </div>
-    <section className='first-section'>
+    
+    
         <div className='headings'>
         <h4>Build your stamp agreements in a shorter time at home</h4>
         <h4><b>Try it for free</b></h4>
-        {!state?<Link className='mainFormbtn-1'to='/templates'>Get Started Now </Link>:<Link className='mainFormbtn-1'to='/templates'>Build Stamp Agreement </Link>}
+       
         </div> 
-         <div className='headings-img'>
- <img src={mainFirstPic} alt='loading' className='mainImage'/>
-        </div> 
+        <div className='firstbtn'>
+        {(state === 'none')?<Link className='mainFormbtn-1'to='/templates'>Get Started Now </Link>:<Link className='mainFormbtn-1'to='/templates'>Build Stamp Agreement </Link>}
+        </div>
+         {/* <div className='headings-img'>
+ <img src={readyImg} alt='loading' className='mainImage'/>
+ </div> */}
+        
+        
      </section>
+     {/* </div> */}
     <section className='mainForm_templates'>
       <div >
       <h2 className='mfth'><b>Agreement Templates of every category</b></h2>
@@ -87,7 +104,7 @@ const Main = () => {
             
             
            </div>
-           <div className='col-md-5'>
+           <div className='col-md-6 d-flex justify-content-end'>
            <div className='pickTemplate-img'>
 
 </div>
@@ -137,7 +154,7 @@ const Main = () => {
             <div className='ready'>
 <div className='ready-text'>
 <h2 >Ready to write online stamp agreements</h2>
-{!state?<Link className='mainFormbtn-1 btn-position'to='/templates'>Get Started Now </Link>:<Link className='mainFormbtn-1 btn-position'to='/templates'>Build Stamp Agreement</Link>}
+{(state === 'none')?<Link className='mainFormbtn-1 btn-position'to='/templates'>Get Started Now </Link>:<Link className='mainFormbtn-1 btn-position'to='/templates'>Build Stamp Agreement</Link>}
 </div>
 <div className='ready-img'>
   

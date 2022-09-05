@@ -129,11 +129,44 @@ const UndertakingSecond = () => {
        <div className='undertakingContent'>
            <p><span className='oath'>"I declare the oath that whatever I am going to write shall be the whole truth."</span><br/>
            I <input className='contentInput' id='contentInputWidth' type='text'/> son of <input className='contentInput' id='contentInputWidth' type='text'/>, resident of <input className='contentInput' id='contentInputWidth' type='text' placeholder='address'/>.I admit that I will follow all the rules of <input className='contentInput' id='contentInputWidth' type='text' placeholder='Name of Institue'/> and all of my acts will be according to the laws of this Institue. If any of my action is against the laws of this institue, I will be responsible and the institue has all the rights to take action against me. I have read the document and my digital signature ensures that this affidavet is the proof in the time of need.<br/>
-           <span className='fw-bold mt-5 '>Signature:<br/></span> <input className='contentInput' type='text'/><br/>
-           <span className='fw-bold'>Lawyer's Signature:</span> <input className='contentInput' type='text'/></p>
+           {/* <span className='fw-bold mt-5 '>Signature:<br/></span> <input className='contentInput' type='text'/><br/>
+           <span className='fw-bold'>Lawyer's Signature:</span> <input className='contentInput' type='text'/></p> */}</p>
        </div>
+       <div className='row userDetails'>
+
+<div className='col-md-4'>
+    <label className='tempLabels'>Person's Signature:</label><br /></div>
+<div className='col-md-8'>
+<div className='row'>
+    <div className='col-md-9'>
+    <input className='tempInputs' id='SignatureInputs' type='text' 
+    /><br />
+    </div>
+    <div className='col-md-3'>
+   <button className='signatureBtn'>Sign</button>
+   </div>
+
+
+   </div>
+   </div>
+<div className='col-md-4'><label className='tempLabels'>Lawyer's Signature</label><br /></div>
+<div className='col-md-8'>
+<div className='row'>
+    <div className='col-md-9'>
+    <input className='tempInputs' id='SignatureInputs' type='text' 
+    /><br />
+    </div>
+    <div className='col-md-3'>
+   <button className='signatureBtn'>Sign</button>
+   </div>
+
+
+   </div>
+</div>
+
+</div>
        <div className='row d-flex'>
-        <div><Link className='btn temp-btn' to='/'>Submit</Link></div>
+        <div><Link className='btn agreement-btn' to='/'>Submit</Link></div>
         
         <div><button className='btn temp-btn-download' onClick={pdfGenerator}>Download</button></div>
         

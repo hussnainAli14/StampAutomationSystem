@@ -60,7 +60,7 @@ const navChanger = ()=>{
                     
                     </label>
                     
-                    </div>
+                    </div> 
                     <div className='my-2 btn-hover text-center'>
             <Link className='btn btn-outline-primary rounded-pill' to='/main' onClick={navChanger}>Log In</Link>
             </div>

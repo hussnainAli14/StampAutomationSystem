@@ -77,7 +77,7 @@ const AccountVerification = () => {
 <div className='col-md-6 d-lg-flex mt-5 card-margin'>
 <div className='cardDetails'>
 <h3 className='fw-bold text-center text-white mt-3'>Front Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Image contents should be readable. Image size should be 325px * 208px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Image contents should be readable. Image size should be 325px * 208px.</p>
 <input type='file' name='imageUpload' id='input' className='account-cardbtn-1' accept='image/*' onChange={imageHandler}/>
   <label htmlFor='input' className='imageUpload'>
     Select Image
@@ -96,7 +96,7 @@ const AccountVerification = () => {
 <div className='col-md-6 d-lg-flex flex-row-reverse card-margin'>
 <div className='cardDetails'>
 <h3 className='fw-bold text-center text-white ' id='BackImage'>Back Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Image contents should be readable. Image size should be 325px * 208px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Image contents should be readable. Image size should be 325px * 208px.</p>
 <input type='file' name='imageUploadBack' id='input1' className='account-cardbtn-1' accept='image/*' onChange={imageHandlerBack}/>
   <label htmlFor='input1' className='imageUpload'>
     Select Image
@@ -117,7 +117,7 @@ const AccountVerification = () => {
 <div className='col-md-6 d-lg-flex card-margin mt-5'>
 <div className='cardDetailsBill'>
 <h3 className='fw-bold text-center text-white mt-5'>Front Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Any Utilty Bill (Gas, Electricity, Water).Image contents should be readable. Image size should be 325px * 450px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Any Utilty Bill (Gas, Electricity, Water).Image contents should be readable. Image size should be 325px * 450px.</p>
 <input type='file' name='imageUploadBill' id='input3' className='account-cardbtn-1 cardImgBill' accept='image/*' onChange={imageHandlerBill}/>
   <label htmlFor='input3' className='imageUpload'>
     Select Image

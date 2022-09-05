@@ -85,7 +85,7 @@ const LawyerAccountVerification = () => {
 <div className='col-md-6 d-lg-flex mt-5 card-margin'>
 <div className='cardDetails'>
 <h3 className='fw-bold text-center text-white mt-3'>Front Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Image contents should be readable. Image size should be 325px * 208px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Image contents should be readable. Image size should be 325px * 208px.</p>
 <input type='file' name='imageUpload' id='input' className='account-cardbtn-1' accept='image/*' onChange={imageHandler}/>
   <label htmlFor='input' className='imageUpload'>
     Select Image
@@ -105,7 +105,7 @@ const LawyerAccountVerification = () => {
 <div className='col-md-6 d-lg-flex flex-row-reverse card-margin mt-5'>
 <div className='cardDetails'>
 <h3 className='fw-bold text-center text-white mt-3'>Back Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Image contents should be readable. Image size should be 325px * 208px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Image contents should be readable. Image size should be 325px * 208px.</p>
 <input type='file' name='imageUploadBack' id='input1' className='account-cardbtn-1' accept='image/*' onChange={imageHandlerBack}/>
   <label htmlFor='input1' className='imageUpload'>
     Select Image
@@ -127,7 +127,7 @@ const LawyerAccountVerification = () => {
 <div className='col-md-6 d-lg-flex mt-5 card-margin'>
 <div className='cardDetails'>
 <h3 className='fw-bold text-center text-white mt-3'>Front Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Image contents should be readable. Image size should be 325px * 208px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Image contents should be readable. Image size should be 325px * 208px.</p>
 <input type='file' name='imageUploadlicenseFront' id='input4' className='account-cardbtn-1' accept='image/*' onChange={imageHandlerlicenseFront}/>
   <label htmlFor='input4' className='imageUpload'>
     Select Image
@@ -147,7 +147,7 @@ const LawyerAccountVerification = () => {
 <div className='col-md-6 d-lg-flex flex-row-reverse card-margin mt-5'>
 <div className='cardDetails'>
 <h3 className='fw-bold text-center text-white mt-3'>Back Side Image</h3>
-<p className='text-white text-center ps-5 pe-5 fs-5'>Image contents should be readable. Image size should be 325px * 208px.</p>
+<p className='text-white text-center ps-5 pe-5 fs-5 details'>Image contents should be readable. Image size should be 325px * 208px.</p>
 <input type='file' name='imageUploadlicenseBack' id='input5' className='account-cardbtn-1' accept='image/*' onChange={imageHandlerlicenseback}/>
   <label htmlFor='input5' className='imageUpload'>
     Select Image

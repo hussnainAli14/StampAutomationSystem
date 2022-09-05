@@ -66,7 +66,7 @@ const PropertySaleAgreement = () => {
                 handleSubmit,
                 isSubmitting,
 
-            }) => (
+            }) => ( 
                 <div className='AgreementBody'>
                     <div className='defaultStylingAgreement'>
 
@@ -147,12 +147,81 @@ const PropertySaleAgreement = () => {
  
                                     
                                     </div>
-                                    <span className='fw-bold mb-3' id='Signature'>Signature First Party:</span> <input className='contentInput mb-3' type='text' /><br/>
+                                    {/* <span className='fw-bold mb-3' id='Signature'>Signature First Party:</span> <input className='contentInput mb-3' type='text' /><br/>
                                     <span className='fw-bold mb-3 ' id='Signature'>Signature Second Party:</span> <input className='contentInput mb-3' type='text' /><br/>
                                     <span className='fw-bold mb-3' id='Signature'>Signature First Party's Witness:</span> <input className='contentInput mb-3' type='text' /><br/>
-                                    <span className='fw-bold mb-3' id='Signature'>Signature Second Party's Witnees:</span> <input className='contentInput mb-3' type='text' />
+                                    <span className='fw-bold mb-3' id='Signature'>Signature Second Party's Witnees:</span> <input className='contentInput mb-3' type='text' /> */}
                             </div>
-                            
+                            <div className='row userDetails'>
+
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>Seller's Signature:</label><br /></div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Sign</button>
+                                       </div>
+
+
+                                       </div>
+                                       </div>
+                                    <div className='col-md-4'><label className='tempLabels'>Buyer's Public Address</label><br /></div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       </div>
+
+
+                                       </div>
+                                    </div>
+
+
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>First Witness Public Address:</label><br />
+                                    </div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' placeholder='You can also write email address of witness' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       
+                                       </div>
+
+
+                                       </div>
+
+                                    </div>
+
+                                    <div className='col-md-4'>
+                                        <label className='tempLabels'>Second Witness Public Address:</label><br />
+                                    </div>
+                                    <div className='col-md-8'>
+                                    <div className='row'>
+                                        <div className='col-md-9'>
+                                        <input className='tempInputs' id='SignatureInputs' type='text' placeholder='You can also write email address of witness' 
+                                        /><br />
+                                        </div>
+                                        <div className='col-md-3'>
+                                       <button className='signatureBtn'>Send</button>
+                                       </div>
+
+
+                                       </div>
+
+                                    </div>
+                                </div>
                             <div>
                                 
                             </div>

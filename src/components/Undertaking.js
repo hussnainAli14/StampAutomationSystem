@@ -129,11 +129,44 @@ const Undertaking = () => {
        <div className='undertakingContent'>
            <p><span className='oath'>"I declare the oath that whatever I am going to write shall be the whole truth."</span><br/>
            I resident of <input className='contentInput' id='contentInputWidth' type='text'/>, state that House No <input className='contentInput' id='contentInputWidth' type='text'/> located <input id='contentInputWidth' className='contentInput' type='text'/> is under my solitary ownership. My <input className='contentInput' type='text' placeholder='relation to the person'/>, <input className='contentInput' type='text' placeholder='name of that person'/> wants to get a new <input className='contentInput' type='text' placeholder='electicity/gas/water'/> connection on the above mentioned house, on which I have no objection (now or in future). He will follow the rules of respective organization. He will pay the bills in due time given by the organization. There are no dues of the organization and if there are any, he is responsible to pay them. I have read the above written doccument and my digital signature ensures that this Affidavet is the proof and will be useful in the time of need.<br/>
-           <span className='fw-bold'>Signature:</span> <input className='contentInput' type='text'/><br/>
-           <span className='fw-bold'>Lawyer's Signature:</span> <input className='contentInput' type='text'/></p>
+           {/* <span className='fw-bold'>Signature:</span> <input className='contentInput' type='text'/><br/>
+           <span className='fw-bold'>Lawyer's Signature:</span> <input className='contentInput' type='text'/></p> */}</p>
        </div>
+       <div className='row userDetails'>
+
+<div className='col-md-4'>
+    <label className='tempLabels'>Person's Signature:</label><br /></div>
+<div className='col-md-8'>
+<div className='row'>
+    <div className='col-md-9'>
+    <input className='tempInputs' id='SignatureInputs' type='text' 
+    /><br />
+    </div>
+    <div className='col-md-3'>
+   <button className='signatureBtn'>Sign</button>
+   </div>
+
+
+   </div>
+   </div>
+<div className='col-md-4'><label className='tempLabels'>Lawyer's Signature</label><br /></div>
+<div className='col-md-8'>
+<div className='row'>
+    <div className='col-md-9'>
+    <input className='tempInputs' id='SignatureInputs' type='text' 
+    /><br />
+    </div>
+    <div className='col-md-3'>
+   <button className='signatureBtn'>Sign</button>
+   </div>
+
+
+   </div>
+</div>
+
+</div>
        <div className='row d-flex'>
-        <div><Link className='btn temp-btn' to='/'>Submit</Link></div>
+        <div><Link className='btn agreement-btn' to='/'>Submit</Link></div>
         
         <div><button className='btn temp-btn-download' onClick={pdfGenerator}>Download</button></div>
         

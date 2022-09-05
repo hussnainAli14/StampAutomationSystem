@@ -38,28 +38,23 @@ import RentAgreement from './components/RentAgreement';
 import LawyerDocuments from './components/LawyerDocuments';
 import Notifications from './components/Notifications';
 import CardRotator from './components/CardRotator';
-// import { Scrollbars } from 'react-custom-scrollbars-2';
 
-// import downloadAndQe from './components/downloadAndQe';
-// import Alert from './components/Alert';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
+import AccountPage from './components/AccountPage';
 export const userContext = createContext();
 export const verificationContext = createContext();
 function App() {
  const [state, dispatch] = useReducer(reducer, initialState);
  
   return (
-    // <Scrollbars style={{width:'100px' , height:'500px'}}>
-    <BrowserRouter>
-    
+    <BrowserRouter>    
     <DocumentState>
     <userContext.Provider value={{state, dispatch}}>
-      
-    <ScrollToTop/>
+      <ScrollToTop/>
         <Navbar/>
         
      <Routes>
@@ -96,14 +91,13 @@ function App() {
     <Route path='/payment' element={<Payment/>}/>
     <Route path='/propertyagreement' element={<PropertySaleAgreement/>}/>
     <Route path='/rentagreement' element={<RentAgreement/>}/>
-    {/* <Route path='/downloadAndQr' element={<downloadAndQe/>}/> */}
+    <Route path='/accountpage' element={<AccountPage/>}/>
     </Routes>
     <Footer/>
     </userContext.Provider>
     </DocumentState>
     
     </BrowserRouter>
-    // </Scrollbars>
   );
 }
 

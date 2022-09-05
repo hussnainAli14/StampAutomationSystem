@@ -1,20 +1,25 @@
-import {React} from 'react'
+import {React, useState} from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { BiArrowToRight } from "react-icons/bi";
 import UserImg from '../images/man.png'
 import LawyerImg from '../images/lawyer.png'
 import * as yup from 'yup';
 import { Formik } from 'formik';
+import EmailIcon from '@mui/icons-material/Email';
+import KeySharpIcon from '@mui/icons-material/KeySharp';
+import VisibilitySharpIcon from '@mui/icons-material/VisibilitySharp';
+// import VisibilityOffSharpIcon from '@mui/icons-material/VisibilityOffSharp';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 // import { PersistFormikValues } from 'formik-persist-values';
 const UserSignup = (props) => {
     let location = useLocation();
-    
-   
+    const [passwordVisible, setpasswordVisible] = useState(false)
+    const [ConfirmpasswordVisible, setConfirmpasswordVisible] = useState(false)
     const validate = yup.object({
         firstName: yup.string().required('Required'),
         lastName: yup.string().required('Required'),
         email: yup.string().email('Email is invaliid').required('Required'),
-        password: yup.string().min(8, 'Password must contain atleast 8 chracters or more').required('Required'),
+        password: yup.string().min(8, 'Password must contain atleast 8 chracters').required('Required'),
         confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Password must match').required('Required')
     })
    
@@ -69,56 +74,49 @@ const UserSignup = (props) => {
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={values.firstName} />
-                            {/* <label className='user_signup_form_label' name='firstName'>
-                                First Name
-                            </label><br /> */}
+                
+                            
                             <p className="errors p-margin" > {errors.firstName && touched.firstName && errors.firstName}</p><br />
-                                
-                          {/* {console.log(value)} */}
+                        
                             <input type="text" id="input" name='lastName' placeholder="Last Name" className={`user_signup_form_input ${!(errors.lastName && touched.lastName) ? 'input-margin' : ''}`} 
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={values.lastName} />
-                            {/* <label className='user_signup_form_label' name='lasttName'>
-                                Last Name
-                            </label> <br />*/}
-                           {/* {console.log(touched)} */}
+                            
                             <p className='errors p-margin'> {errors.lastName && touched.lastName && errors.lastName}</p><br />
 
                             <input type="email" id="input" name='email'  placeholder="Email Address" className={`user_signup_form_input ${!(errors.email && touched.email) ? 'input-margin' : ''}`} 
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={values.email} />
-                            {/* <label name='email' className='user_signup_form_label'>
-                                Email Address
-                            </label> <br />*/}
+                                <EmailIcon className='emailIcon'/>
+                           
                             <p className='errors p-margin'>{errors.email && touched.email && errors.email}</p><br />
-                            <input name='password' id="input" type="password" placeholder="Password" className={`user_signup_form_input ${!(errors.password && touched.password) ? 'input-margin' : ''}`} 
+                            <input name='password' id="input" type={passwordVisible?'text':"password"} placeholder="Password" className={`user_signup_form_input ${!(errors.password && touched.password) ? 'input-margin' : ''}`} 
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={values.password} />
-                            {/* <label name='password' className='user_signup_form_label'>
-                                Password
-                            </label> <br />*/}
+                            
+                                 {values.password ===''? <KeySharpIcon className='emailIcon'/>:
+                                 (!passwordVisible)?<VisibilitySharpIcon className='emailIcon' id='VisibilityIcon' onClick={()=>{
+                                    setpasswordVisible(true)
+                                 }}/>:<VisibilityOffIcon className='emailIcon' id='VisibilityIcon' onClick={()=> setpasswordVisible(false)}/>}
+                                 {/* {passwordVisible?<VisibilityOffIcon className='emailIcon' id='VisibilityIcon' onClick={()=> setpasswordVisible(false)}/>:''} */}
                             <p className='errors p-margin'>  {errors.password && touched.password && errors.password}</p><br />
 
-                            <input type="password" id="input" name='confirmPassword' placeholder="Confirm Password" className={`user_signup_form_input ${!(errors.confirmPassword && touched.confirmPassword) ? 'input-margin' : ''}`} 
+                            <input type={ConfirmpasswordVisible?'text':"password"} id="input" name='confirmPassword' placeholder="Confirm Password" className={`user_signup_form_input ${!(errors.confirmPassword && touched.confirmPassword) ? 'input-margin' : ''}`} 
                                 onBlur={handleBlur}
                                 onChange={handleChange}
                                 value={values.confirmPassword} />
-
-
-                            {/* <label name='confirmPassword' className='user_signup_form_label'>
-                                Confirm Password
-                            </label><br /> */}
+                         {values.confirmPassword ===''?<KeySharpIcon className='emailIcon'/>:(!ConfirmpasswordVisible)?<VisibilitySharpIcon className='emailIcon' id='VisibilityIcon' onClick={()=> setConfirmpasswordVisible(true)}/>:<VisibilityOffIcon className='emailIcon' id='VisibilityIcon' onClick={()=> setConfirmpasswordVisible(false)}/>}
 
                             <p className='errors p-margin'> {errors.confirmPassword && touched.confirmPassword && errors.confirmPassword}</p>
 
-                            {location.pathname === '/UserSignup' ? <Link to='/UserSignup2' className="btn-signup"  >Next<BiArrowToRight /></Link> : <Link className="btn-signup" to='/LawyerSignup2' >Next<BiArrowToRight /></Link>}
+                            {location.pathname === '/UserSignup'?<Link to='/UserSignup2' className="btn-signup" >Next<BiArrowToRight /></Link> : <Link className="btn-signup" to='/LawyerSignup2' >Next<BiArrowToRight /></Link>}
                             
                         </form>
                     </div>
-                    {/* <PersistFormikValues name="signup-form" /> */}
+                   
                 </div>
             )}
         </Formik>

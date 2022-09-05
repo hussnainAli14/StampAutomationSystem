@@ -30,7 +30,9 @@ const MediaRecorder = () => {
         <div className='recording-screen'>
                  { stopped&&<video className='screen' src={mediaBlobUrl} controls autoPlay loop />}
         </div>
-      
+      <div >
+       {stopped &&<button className='btn rounded-pill bg-primary text-white rSubmitBtn'>Submit</button>}
+      </div>
     
     </div>
   </div>

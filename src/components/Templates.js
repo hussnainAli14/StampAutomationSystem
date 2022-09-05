@@ -96,7 +96,7 @@ const Templates = () => {
           return <div className='col-lg-4 col-md-6' key={element.cardKey}>
           <TemplatesItem image={element.image} title={element.title} desc={element.desc}  />
           </div>
-        })}
+        })} 
         
     
     
