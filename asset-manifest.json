@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/StampAutomationSystem/static/css/main.7f2b8454.css",
-    "main.js": "/StampAutomationSystem/static/js/main.bf937cf8.js",
+    "main.css": "/StampAutomationSystem/static/css/main.5e9c8290.css",
+    "main.js": "/StampAutomationSystem/static/js/main.d5804a4f.js",
     "static/js/498.21d60a07.chunk.js": "/StampAutomationSystem/static/js/498.21d60a07.chunk.js",
     "static/js/703.5f1c7695.chunk.js": "/StampAutomationSystem/static/js/703.5f1c7695.chunk.js",
     "static/js/513.a9d2816e.chunk.js": "/StampAutomationSystem/static/js/513.a9d2816e.chunk.js",
@@ -27,15 +27,15 @@
     "static/media/templateHeadingImg.png": "/StampAutomationSystem/static/media/templateHeadingImg.5532634448c10ae755a7.png",
     "static/media/bill.jfif": "/StampAutomationSystem/static/media/bill.2ab033901e58ae7dbac3.jfif",
     "index.html": "/StampAutomationSystem/index.html",
-    "main.7f2b8454.css.map": "/StampAutomationSystem/static/css/main.7f2b8454.css.map",
-    "main.bf937cf8.js.map": "/StampAutomationSystem/static/js/main.bf937cf8.js.map",
+    "main.5e9c8290.css.map": "/StampAutomationSystem/static/css/main.5e9c8290.css.map",
+    "main.d5804a4f.js.map": "/StampAutomationSystem/static/js/main.d5804a4f.js.map",
     "498.21d60a07.chunk.js.map": "/StampAutomationSystem/static/js/498.21d60a07.chunk.js.map",
     "703.5f1c7695.chunk.js.map": "/StampAutomationSystem/static/js/703.5f1c7695.chunk.js.map",
     "513.a9d2816e.chunk.js.map": "/StampAutomationSystem/static/js/513.a9d2816e.chunk.js.map",
     "787.bd02f72e.chunk.js.map": "/StampAutomationSystem/static/js/787.bd02f72e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f2b8454.css",
-    "static/js/main.bf937cf8.js"
+    "static/css/main.5e9c8290.css",
+    "static/js/main.d5804a4f.js"
   ]
 }
