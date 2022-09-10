@@ -20,6 +20,9 @@ const RentAgreement = () => {
         const doc = new jsPDF('landscape','px','a4','false');
         doc.save('download.pdf')
     }
+    const capitalizar = (element)=>{
+        return (element = element.charAt(0).toUpperCase() + element.slice(1))
+       }
     return (
         <Formik
             initialValues={{
@@ -72,7 +75,7 @@ const RentAgreement = () => {
 
                         <form >
 
-                            <h2 className='templateHeading'>{(values.propertyType === '')?'Property Rent Agreement':`${values.propertyType} Stamp Agreement`}</h2>
+                            <h2 className='templateHeading'>{(values.propertyType === '')?'Property Rent Agreement':`${capitalizar(values.propertyType)} Stamp Agreement`}</h2>
                             <div className='row userDetails'>
 
                                 <div className='col-md-3'>
@@ -80,14 +83,14 @@ const RentAgreement = () => {
                                 <div className='col-md-9'>
 
                                     <input name='Name' className='tempInputs' type='text' placeholder='Full Name' onChange={handleChange} onBlur={handleBlur}
-                                        value={values.Name} /><br />
+                                        value={capitalizar(values.Name)} /><br />
                                     <p className="tempErrors p-margin" > {errors.Name && touched.Name && errors.Name}</p><br /></div>
                             
                             
                                 <div className='col-md-3'><label className={errors.FatherName && touched.FatherName ? 'tempErrors label-marign tempLabels' : 'tempLabels'}>Father Name:</label><br /></div>
                                 <div className='col-md-9'>
                                     <input name='FatherName' className='tempInputs' type='text' placeholder='Father Name' onChange={handleChange} onBlur={handleBlur}
-                                        value={values.FatherName} /><br />
+                                        value={capitalizar(values.FatherName)} /><br />
                                     <p className="tempErrors p-margin" > {errors.FatherName && touched.FatherName && errors.FatherName}</p><br />
                                 </div>
                             

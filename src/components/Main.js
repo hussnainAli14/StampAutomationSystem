@@ -56,7 +56,7 @@ const Main = () => {
       <div className='row justify-content-center mt-5'>
         
         <div className='col-md-3'>
-      <div className='card'>
+      <div className='card ' id='cardMain'>
        <img src={vehiclesAgreement} className='mainCardImg' alt='loading'/>
       </div>
       <div className='card-desc'>

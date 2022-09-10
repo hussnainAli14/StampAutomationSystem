@@ -893,7 +893,7 @@ margin-top: 0;
   background-color:#f2f2f2e7 ;
   color: black;
   height: 320px;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 20px;
 }
 .textblank-content{
@@ -932,7 +932,7 @@ margin-top: 0;
   padding: 48px 320px;
 }
 .btn-position{
-  margin-left: 192px ;
+  margin-left: 220px ;
 }
 .ready-img{
   margin-top: 80px;
@@ -1506,7 +1506,8 @@ margin-bottom: 24px;
   position: relative;
   height: 1760px;
   margin-top: 64px;
-  background-color: #313B47;
+  /* background-color: #313B47; */
+  background-color:rgb(4,39,67);
 }
 #SignatureInputs{
 width: 80%;

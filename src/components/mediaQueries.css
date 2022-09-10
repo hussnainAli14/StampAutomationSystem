@@ -298,8 +298,9 @@
           padding: 0 100px 48px 100px;
         }
         .pickTemplate-img{
-         margin-top: 20px;
+         margin: 20px auto;
           width: 470px;
+
         }
         .fillBlanks-img{
           margin-top: 10px;
@@ -481,12 +482,16 @@ margin-left: 10px;
       height: 350px;
       width: 100%;
       background-size: cover;
+      margin: 10px auto;
     }
     .fillBlanks-img{
       
       height: 350px;
       width: 100%;
       background-size: cover;
+    }
+    .fillBlanksnumber-img{
+      margin-top: 10px;
     }
     .text-number2{
       float: right;
@@ -507,7 +512,7 @@ margin-left: 10px;
     width: 100%;
   }
   .btn-position{
-    margin-left: 40px ;
+    margin-left: 60px ;
     margin-right: 30px;
     padding:12px 10px ;
   }
@@ -523,8 +528,8 @@ margin-left: 10px;
     margin-top: 20px;
     /* margin-bottom: 20rem; */
     height: 150px;
-    width: 80%;
-    margin-left: 30px;
+    width: 100%;
+    /* margin-left: 30px; */
     background-size: cover;
   }
   /*templates*/
@@ -904,7 +909,7 @@ transform: translateY(-33px); }
   {
     padding-right: 0%;
     margin-left:5px ;
-    margin-right: 5px;
+    margin-right: 6px;
     padding-bottom: 10px;
   }
   .mainForm_heading{
@@ -933,14 +938,16 @@ transform: translateY(-33px); }
     height:1900px;
     width:100%;
   }
-  
+  /* #card-main{
+    width: 85%;
+  } */
   .mft-p{
     text-align: center;
     padding:50px 20px 0px 20px ;
   }
   .card{
     height: 250px;
-    width: 70%;
+    width: 85%;
     margin-left: 40px;
   }
   .mainCardImg{
@@ -983,22 +990,37 @@ transform: translateY(-33px); }
 .text-content{
   margin-top:25px;
   margin-left: 30px;
+  width: 90%;
+}
+.pickTemplate-p {
+  margin-top: 1rem;
+  /* padding-right: 5rem; */
+  line-height: 1.5;
+  /* text-align: center; */
+  font-size: 1.2rem;
   width: 100%;
 }
 .pickTemplate-img{
   
   border-radius: 15px;
   height: 300px;
-  width: 100%;
+  width: 100vw;
+  margin: 10px auto;
 }
 .fillBlanks-img{
   height: 300px;
   width: 100%;
   }
+  .fillBlanksnumber-img{
+    margin-top: 10px;
+  }
+  
   .textblank-content{
+    width: auto;
     padding-top: 60px;
     margin-left: 40px;
-    width:100%;
+    padding-right: 0px;
+    /* width:100%; */
   }
   .downloadTemplate-img{
     margin-top: 20px;
@@ -1036,10 +1058,13 @@ transform: translateY(-33px); }
   .card-desc-text{
     text-align: center;
     margin-top: 130px;
-    width: 80%;
+    width: 100%;
     margin-bottom: 3rem;
     font-weight: bold;
   }
+  /* .cardBodyStyle{
+    width: 100%;
+  } */
   .cardbtn-1{
     margin-top: 60%;
   }
@@ -1240,7 +1265,7 @@ width: 90%;
       width: 103.5vw;
     }
    .navbarInput{
-    margin-left: 12%;
+    margin-left: 10%;
    }
      .doc{
       margin-left: 6px;
@@ -1259,6 +1284,9 @@ width: 90%;
     }
     .notificationPanel{
 width: 95%;
+    }
+    .doc-details-info{
+      margin-left: 17%;
     }
 }
 
@@ -1332,7 +1360,7 @@ margin-left: 40px;   }
     padding: 0 50px 48px 50px;
    }
    .pickTemplate-img{
-  
+   margin: 10px auto;
     border-radius: 15px;
     height: 300px;
     width: 100%;
@@ -1839,6 +1867,7 @@ width: 440px;
   }
   .user-signup-img{
     height: 100vh;
+    padding-bottom: 700px;
   }
   .verification_overlay{
     height:120vh;
