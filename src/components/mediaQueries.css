@@ -947,12 +947,12 @@ transform: translateY(-33px); }
   }
   .card{
     height: 250px;
-    width: 85%;
-    margin-left: 40px;
+    width: 80%;
+    margin-left: 30px;
   }
   .mainCardImg{
       height: 250px;
-      /* width: 80%; */
+      width: 100%;
   }
   .template-heading-image{
     display: none;

@@ -1312,7 +1312,7 @@ font-weight: bold;
 
 .doc-img-style{
   height: 22rem;
-width: 20rem;
+width: 100%;
 /* border: 1px solid lightgray; */
 border-radius: 15px;
 box-shadow: none;
