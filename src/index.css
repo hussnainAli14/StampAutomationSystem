@@ -345,6 +345,14 @@ transition: all 0.2s;
   color: white;
 background-color: #36454F;
 }
+.notActive{
+  text-decoration: none;
+  background-color: #36454F;
+  color: white;
+  padding: 0;
+  border: none;
+  
+}
 /* .fp:{
   background-color: #36454F;
   border: none;
@@ -457,12 +465,14 @@ height: 5rem;
     margin-right: 2rem;
     color:#2b4c65;
     margin-top: 0.8rem;
+    border: none;
    }
    .btn-signup:hover{
     transform: translateY(-2px);
     border-radius: 8px;
    }
    .btn-signup-p{
+    border:none;
     margin-top: 1rem;
     text-decoration: none;
     float: left;
@@ -472,6 +482,12 @@ height: 5rem;
    .btn-signup-p:hover{
     transform: translateY(-2px);
     border-radius: 8px;
+   }
+   .btn-disabled{
+    
+    cursor: not-allowed;
+
+    pointer-events: none;
    }
    
    .upload-btn{
@@ -635,8 +651,13 @@ background-color: #6351ce;
 .input-margin{
   margin-bottom: 0.8rem;
 }
+
 .p-margin{
   margin-bottom: -0.1rem;
+}
+.login-errors{
+  color:orangered;
+  margin-top: 0px;
 }
 /*Main.js*/
 /* .mainBg{
@@ -1524,6 +1545,10 @@ width: 80%;
 
 }
 
+.signatureBtn:disabled{
+  color:grey
+}
+
 .defaultStylingAgreement{
   position: absolute;
  margin-top: 80px;
@@ -2008,14 +2033,14 @@ font-weight: bold;
   background-image: linear-gradient(to right,#00C8AA 0 70%,#313B47 70% 100%);
 }
 .upload{
-  color: white;
+  color: black;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding-left: 10px;
   cursor: pointer;
 
 }
 .upload:hover{
-  color: black;
+  color: white;
 
 }
 
@@ -2045,6 +2070,21 @@ font-weight: bold;
 }
 .security{
   font-size: 22px;
+}
+.uploadBtn{
+  background-color: #313B47;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* padding-left: 10px; */
+  cursor: pointer;
+  color: #00C8AA;
+  padding: 10px;
+  border-radius: 12px;
+  border:none;
+  margin-bottom: 10px;
+}
+
+.uploadBtn:hover{
+  transform: translateY(-2px);
 }
 .password{
   color: grey;

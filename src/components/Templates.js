@@ -11,26 +11,30 @@ const Templates = () => {
         cardKey:1,
        image: vehiclesAgreement,
        title:"Vehicles Sale Agreement",
-       desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+       desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+       path:'/vehiclesAgreement'
      },
      {
         cardKey:2,
         image:propertyAgreement,
         title:"Property Sale Agreement",
-        desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+        desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+        path:'/propertyagreement'
 
      },
      {
         cardKey:3,
         image:rentAgreement,
         title:"Property Rent Agreement",
-        desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+        desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+        path:'/rentagreement'
      },
      {
       cardKey:4,
       image:rentAgreement,
       title:"Property Rent Agreement",
-      desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+      desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+      path:'/rentagreement'
    }
      
     ]
@@ -40,26 +44,31 @@ const Templates = () => {
          cardKey:5,
          image:Undertaking1,
          title:"Affidavet for Meter Connections",
-         desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+         desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+         path:'/undertaking'
+         
       },
  
       {
          cardKey:6,
          image:Undertaking1,
          title:"Affidavet for Institues",
-         desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+         desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+         path:'/undertaking2'
       },
       {
         cardKey:7,
         image:Undertaking1,
         title:"Affidavet for Institues",
-        desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+        desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+        path:'/undertaking'
      },
      {
       cardKey:8,
       image:Undertaking1,
       title:"Affidavet for Institues",
-      desc:"Some quick example text to build on the card title and make up the bulk of the card's content."
+      desc:"Some quick example text to build on the card title and make up the bulk of the card's content.",
+      path:'/undertaking2'
    }
     ]
   return (
@@ -82,7 +91,7 @@ const Templates = () => {
     <h2 className='text-center mt-5 fw-bold fs-italic '>Sale/Purchase/Rent Stamp Templates</h2>
         {template.map((element)=>{
           return <div className='col-lg-4 col-md-6' key={element.cardKey}>
-          <TemplatesItem image={element.image} title={element.title} desc={element.desc}  />
+          <TemplatesItem image={element.image} title={element.title} desc={element.desc} path={element.path}  />
           </div>
         })}
          
@@ -94,7 +103,7 @@ const Templates = () => {
     <h2 className='text-center fw-bold '>UnderTakings / Affidavets</h2>
         {affidavet.map((element)=>{
           return <div className='col-lg-4 col-md-6' key={element.cardKey}>
-          <TemplatesItem image={element.image} title={element.title} desc={element.desc}  />
+          <TemplatesItem image={element.image} title={element.title} desc={element.desc} path={element.path} />
           </div>
         })} 
         

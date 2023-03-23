@@ -25,8 +25,6 @@ import UserPanelVerification from './components/UserPanelVerification';
 import AccountVerification from './components/AccountVerification';
 import LawyerPanel from './components/LawyerPanel';
 import LawyerAccountVerification from './components/LawyerAccountVerification';
-import { initialState,reducer } from './reducer/UseReducer';
-import DocumentState from './reducer/Documents/DocumentState';
 import Undertaking from './components/Undertaking';
 import UndertakingSecond from './components/UndertakingSecond';
 import VehiclesAgreement from './components/VehiclesAgreement';
@@ -40,27 +38,25 @@ import Notifications from './components/Notifications';
 import CardRotator from './components/CardRotator';
 
 import {
-  BrowserRouter,
+  
   Routes,
   Route,
 } from "react-router-dom";
 import AccountPage from './components/AccountPage';
 export const userContext = createContext();
 export const verificationContext = createContext();
+export const postContext = createContext();
 function App() {
- const [state, dispatch] = useReducer(reducer, initialState);
- 
   return (
-    <BrowserRouter>    
-    <DocumentState>
-    <userContext.Provider value={{state, dispatch}}>
+      
+    <>
       <ScrollToTop/>
         <Navbar/>
         
      <Routes>
      <Route path='/rotator' element={<CardRotator />}/>
      <Route index element={<Main />}/>
-     <Route path='/main' element={<Main />}/>
+     <Route path='/StampAutomationSystem' element={<Main />}/>
     <Route path="/about" element={<AboutUs />}/>
     <Route path="/userdocs" element={<UserDocuments/>}/>
     <Route path="/userpanelver" element={<UserPanelVerification />}/>
@@ -94,10 +90,8 @@ function App() {
     <Route path='/accountpage' element={<AccountPage/>}/>
     </Routes>
     <Footer/>
-    </userContext.Provider>
-    </DocumentState>
-    
-    </BrowserRouter>
+   
+    </>
   );
 }
 

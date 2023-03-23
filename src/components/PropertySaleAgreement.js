@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import { Link } from 'react-router-dom'
 import { jsPDF } from "jspdf";
 import QRCode from "react-qr-code";
+// import VehiclesAgreement from './VehiclesAgreement';
 const PropertySaleAgreement = () => {
     const validate = yup.object({
         Name: yup.string().required('Required'),
@@ -77,7 +78,6 @@ const PropertySaleAgreement = () => {
 
                             <h2 className='templateHeading'>{(values.propertyType === '')?'Property Sale Agreement':`${capitalizar(values.propertyType)} Stamp Agreement`}</h2>
                             <div className='row userDetails'>
-
                                 <div className='col-md-3'>
                                     <label className={errors.Name && touched.Name ? 'tempErrors label-marign tempLabels' : 'tempLabels'}>Person's Name:</label><br /></div>
                                 <div className='col-md-9'>

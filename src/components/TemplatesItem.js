@@ -2,6 +2,7 @@ import React from 'react'
 // import Title from 'react-vanilla-tilt'
 import {Link} from 'react-router-dom'
 const TemplatesItem = (props) => {
+  const userId = localStorage.getItem('userId')
   return (
      
 <div className='abcc'>
@@ -13,7 +14,7 @@ const TemplatesItem = (props) => {
    <div className='card__back'>
   <h3 className='cardSubtitle'>{props.title}</h3>
   <p className='descText'>{props.desc}</p>
-  <Link className='btn rounded-pill text-white tempBtn'to='/'>Use this Template</Link>
+  <Link className={(userId!== null)?'btn rounded-pill text-white tempBtn ':'btn rounded-pill text-white tempBtn disabled'} to={props.path}>Use this Template</Link>
    </div>
   {/* </div>
   <div className='title-description'>

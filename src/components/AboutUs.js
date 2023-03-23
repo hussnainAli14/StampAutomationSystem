@@ -1,8 +1,10 @@
 import React from 'react'
 
 const AboutUs = () => {
+  const token = localStorage.getItem("token")
+  {console.log(token)}
   return (
-    <div className='aboutUs'>
+   token && <div className='aboutUs'>
        <div className='about-heading1'>
        <h3 className='about-h'>ABOUT US</h3>
        <p className='about-p'>Here to ease you</p>
