@@ -1,48 +1,59 @@
 import './App.css';
 import './components/mediaQueries.css'
-import {React, createContext, useReducer } from 'react';
-import Navbar from './components/Navbar'
-import Login from './components/Login'
-import Register from './components/Register'
-import UserSignup from './components/UserSignup';
-import UserSignup2 from './components/UserSignup2';
-import LawyerSignup from './components/LawyerSignup';
-import LawyerSignup2 from './components/LawyerSignup2';
-import LawyerLoginPage from './components/LawyerLoginPage';
-import Verification from './components/Verification';
-import TermsCondition from './components/TermsConditions'
-import PrivacyPolicy from './components/PrivacyPolicy'
-import CookiePolicy from './components/CookiePolicy'
-import UserSignin from './components/UserSignin'
-import LoginPage from './components/LoginPage';
-import Footer from './components/Footer';
-import Main from './components/Main';
-import Templates from './components/Templates';
-import AboutUs from './components/AboutUs';
+import {React, createContext,useEffect } from 'react';
+import Navbar from './components/Landing/Navbar'
+import Login from './components/SignIn/Login'
+import Register from './components/Signup/Register'
+import UserSignup from './components/Signup/UserSignup';
+import UserSignup2 from './components/Signup/UserSignup2';
+import LawyerSignup from './components/Signup/LawyerSignup';
+import LawyerSignup2 from './components/Signup/LawyerSignup2';
+import LawyerLoginPage from './components/SignIn/LawyerLoginPage';
+import Verification from './components/Verification/Verification';
+import TermsCondition from './components/Basic/TermsConditions'
+import PrivacyPolicy from './components/Basic/PrivacyPolicy'
+import CookiePolicy from './components/Basic/CookiePolicy'
+import UserSignin from './components/SignIn/UserSignin'
+import LoginPage from './components/SignIn/LoginPage';
+import Footer from './components/Landing/Footer';
+import Main from './components/Landing/Main';
+import Templates from './components/Templates/Templates';
+import AboutUs from './components/Basic/AboutUs';
 import ScrollToTop from './components/ScrollToTop';
-import UserDocuments from './components/UserDocuments';
-import UserPanelVerification from './components/UserPanelVerification';
-import AccountVerification from './components/AccountVerification';
+import UserDocuments from './components/Documents/UserDocuments';
+import UserPanelVerification from './components/Verification/UserPanelVerification';
+import AccountVerification from './components/Verification/AccountVerification';
 import LawyerPanel from './components/LawyerPanel';
-import LawyerAccountVerification from './components/LawyerAccountVerification';
-import Undertaking from './components/Undertaking';
-import UndertakingSecond from './components/UndertakingSecond';
-import VehiclesAgreement from './components/VehiclesAgreement';
+import LawyerAccountVerification from './components/Verification/LawyerAccountVerification';
+import Undertaking from './components/Undertaking/Undertaking';
+import UndertakingSecond from './components/Undertaking/UndertakingSecond';
+import VehiclesAgreement from './components/Agreements/VehiclesAgreement';
 import PersonAddress from './components/PersonAddress';
 import MediaRecorder from './components/MediaRecorder';
 import Payment from './components/Payment';
-import PropertySaleAgreement from './components/PropertySaleAgreement';
-import RentAgreement from './components/RentAgreement';
-import LawyerDocuments from './components/LawyerDocuments';
-import Notifications from './components/Notifications';
-import CardRotator from './components/CardRotator';
+import PropertySaleAgreement from './components/Agreements/PropertySaleAgreement';
+import RentAgreement from './components/Agreements/RentAgreement';
+import LawyerDocuments from './components/Documents/LawyerDocuments';
+import Notifications from './components/Notification/Notifications';
+import axios from './axios/Axios'
+
+// import CardRotator from './components/CardRotator';
+// import {getNotification} from './ApiService/NotificationFunction'
+
 
 import {
   
   Routes,
   Route,
 } from "react-router-dom";
-import AccountPage from './components/AccountPage';
+import AccountPage from './components/Account/AccountPage';
+import PropertyAgreement from './components/Agreements/PropertyAgreement';
+import StampView from './StampView/StampView';
+import ViewDocuments from './StampView/ViewDocuments';
+import QrDocument from './StampView/QrDocument';
+import LawyerListButton from './ListButton/LawyerListButton';
+import { useState } from 'react';
+
 export const userContext = createContext();
 export const verificationContext = createContext();
 export const postContext = createContext();
@@ -51,10 +62,10 @@ function App() {
       
     <>
       <ScrollToTop/>
-        <Navbar/>
+        <Navbar />
         
      <Routes>
-     <Route path='/rotator' element={<CardRotator />}/>
+     {/* <Route path='/rotator' element={<CardRotator />}/> */}
      <Route index element={<Main />}/>
      <Route path='/StampAutomationSystem' element={<Main />}/>
     <Route path="/about" element={<AboutUs />}/>
@@ -88,7 +99,12 @@ function App() {
     <Route path='/propertyagreement' element={<PropertySaleAgreement/>}/>
     <Route path='/rentagreement' element={<RentAgreement/>}/>
     <Route path='/accountpage' element={<AccountPage/>}/>
+    <Route path='/property' element={<PropertyAgreement/>}/>
+    <Route path='/viewStamp' element={<StampView/>}/>
+    <Route path='/viewDocument' element={<ViewDocuments/>} /> 
+    <Route path='/viewDocument/:id' element={<QrDocument/>}/>
     </Routes>
+    {/* <LawyerListButton/> */}
     <Footer/>
    
     </>
