@@ -76,6 +76,7 @@ const UserSignin = (props) => {
       }
     } 
     catch (error) {
+      setLoading(false)
         alert("Invalid login credentials");
        
       

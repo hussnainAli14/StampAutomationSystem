@@ -45,6 +45,7 @@ import {
   
   Routes,
   Route,
+  BrowserRouter,
 } from "react-router-dom";
 import AccountPage from './components/Account/AccountPage';
 import PropertyAgreement from './components/Agreements/PropertyAgreement';
@@ -60,10 +61,11 @@ export const postContext = createContext();
 function App() {
   return (
       
-    <>
+    <> 
       <ScrollToTop/>
         <Navbar />
-        
+     {/* <BrowserRouter> */}
+     
      <Routes>
      {/* <Route path='/rotator' element={<CardRotator />}/> */}
      <Route index element={<Main />}/>
@@ -104,6 +106,7 @@ function App() {
     <Route path='/viewDocument' element={<ViewDocuments/>} /> 
     <Route path='/viewDocument/:id' element={<QrDocument/>}/>
     </Routes>
+    {/* </BrowserRouter>    */}
     {/* <LawyerListButton/> */}
     <Footer/>
    

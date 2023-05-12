@@ -37,7 +37,8 @@ export const witness2 = async ()=>{
 
 export const emailSender = async (email,setReadable)=>{
   try{
-    let res = await axios.post(`/api/v1/users/sendAuthDoc/`,{"email":email})
+    const stampId = localStorage.getItem('stampIds')
+    let res = await axios.post(`/api/v1/users/sendAuthDoc/`,{"id":stampId,"email":email})
     if(res.data.status==='success'){
       setReadable(true)
       emailToast();
