@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 // import {Link} from 'react-router-dom'
+import {ToastContainer, toast} from 'react-toastify'
+
 import { useNavigate } from "react-router";
 import Title from "react-vanilla-tilt";
 import CnicImg from "../../images/insertImage1.jpg";
@@ -7,6 +9,24 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import axios from "../../axios/Axios"
 const LawyerAccountVerification = () => {
+  const showCnicToast = ()=>{
+    toast('Images Uploaded Successfully!' ,{
+      theme:'dark',
+      position:"top-center",
+    })
+  }
+  const CnicErrorToast = ()=>{
+    toast.error('Image not uploaded',{
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      })
+  }
   const userId = localStorage.getItem('userId')
   const [imageFront, setimageFront] = useState({
     preview: CnicImg,
@@ -59,12 +79,13 @@ const LawyerAccountVerification = () => {
     try{
       let res = await axios.post(`/api/v1/users/uploadCnic/${userId}`,formData)
       if(res.data.status === "success"){
-
+      showCnicToast();
         console.log("Uploaded",formData)
       }
         
     }
     catch(error){
+      CnicErrorToast()
       console.log(error)
     }
   }
@@ -294,6 +315,8 @@ const LawyerAccountVerification = () => {
           </Button> */}
           </Modal.Footer>
         </Modal>
+    <ToastContainer/>
+
       </div>
     </>
   );

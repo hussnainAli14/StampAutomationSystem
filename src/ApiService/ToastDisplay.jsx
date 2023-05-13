@@ -14,14 +14,20 @@ export const showToastf= (e)=>{
       })}
       export const showToastDisplay1= ()=>{
         // e.preventDefault(
-        toast('Document Sent Successfully!',{
-          theme:'dark',
-          position:"top-center",
-        })}
+        toast('Document Sent Successfully!' ,{
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          })}
 
         export const NotificationToast= ()=>{
           // e.preventDefault(
-          toast('User Not found!Please enter a valid public key',{
+          toast.error('User Not found!Please enter a valid public key',{
             theme:'dark',
             position:"top-center",
           })}

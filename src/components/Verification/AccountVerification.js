@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router";
+import {ToastContainer, toast} from 'react-toastify'
 import Title from "react-vanilla-tilt";
 import CnicImg from "../../images/insertImage1.jpg";
 import bill from "../../images/bill.jfif";
@@ -11,6 +12,24 @@ import { accountVerifyToast } from "../../ApiService/ToastDisplay";
 const AccountVerification = () => {
   const userId = localStorage.getItem('userId')
   const [alert, showAlert] = useState(false)
+  const showCnicToast = ()=>{
+    toast('Images Uploaded Successfully!' ,{
+      theme:'dark',
+      position:"top-center",
+    })
+  }
+  const CnicErrorToast = ()=>{
+    toast.error('Image not uploaded',{
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      })
+  }
   const [imageFront, setimageFront] = useState({
     preview: CnicImg,
     raw: "",
@@ -64,11 +83,13 @@ const AccountVerification = () => {
     try{
       let res = await axios.post(`/api/v1/users/uploadCnic/${userId}`,formData)
       if(res.data.status === "success"){
+        showCnicToast()
           showAlert(true)
       }
         
     }
     catch(error){
+      CnicErrorToast();
       console.log(error)
     }
   }
@@ -236,6 +257,8 @@ const billUpload = async ()=>{
           </Button> */}
         </Modal.Footer>
       </Modal>
+    <ToastContainer/>
+
     </div>
     </>
   );
