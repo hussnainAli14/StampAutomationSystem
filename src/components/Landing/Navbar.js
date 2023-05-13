@@ -70,6 +70,7 @@ console.log(array1)
   useEffect(() => {
     getNotification(setNotification)
   },[])
+  // getNotification(setNotification)
   
   return (
     <>
@@ -161,7 +162,10 @@ console.log(array1)
         </>
       )}
       {userId && userType === "user" && (
+  // getNotification(setNotification)
+        // {}
         <>
+        {/* {getNotification(setNotification)} */}
           {location.pathname !== "/userdocs" ? (
             <nav className="navbar navbar-expand-lg fixed-top bg-light text-dark shadow">
               <div className="container-fluid">
@@ -316,6 +320,7 @@ console.log(array1)
       )}
       {userId && userType === "lawyer" && (
         <>
+        {/* {getNotification(setNotification)} */}
           {location.pathname !== "/Lawyerdocuments" ? (
             <>
               <nav className="navbar navbar-expand-lg fixed-top bg-light text-dark shadow">

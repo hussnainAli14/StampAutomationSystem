@@ -1,6 +1,6 @@
 
 import axios from '../axios/Axios'
-import { showToastDisplay, showToastf } from './ToastDisplay';
+import { NotificationToast, showToastDisplay, showToastDisplay1, showToastf } from './ToastDisplay';
 const senderkey = localStorage.getItem('public')
 console.log(senderkey)
 let newarray;
@@ -23,23 +23,26 @@ catch(error){
 // Send Notifications
 
 export const sendNotification = async(message,recieverkey,details,setReadable)=>{
-        
+        console.log('sdad',recieverkey)
     try{
     let res = await axios.post(`/api/v1/notification/`,
     {
       "message":message,
       "sender":senderkey,
       "reciever":recieverkey,   
-      "stampDetail":details,
+      "stamp":details,
   })
   if(res.data.status === 'success'){
-    showToastDisplay();
+    showToastDisplay1();
+    // NotificationToast();
     setReadable(true)
     console.log(res)
     console.log('API MEssage',res.data.message)
   }
 }
 catch(error){
+    NotificationToast();
+
   console.log(error)
 }
 }

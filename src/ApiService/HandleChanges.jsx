@@ -1,8 +1,8 @@
 export const buyerChange = (e,setsign)=>{
-const {value}= e.target
-
+const {value}= e.target.value
+console.log(e.target)
 setsign(value)
-
+console.log('ddd',value)
 }
 
 export const witnessChange1 = (e,setsign)=>{

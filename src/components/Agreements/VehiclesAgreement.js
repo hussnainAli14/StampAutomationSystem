@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useFormik } from "formik";
 import AgreementData from "./AgreementData";
 import { valueSetter } from "../../ApiService/NotificationFunction";
@@ -59,6 +59,17 @@ const VehiclesAgreement = () => {
   localStorage.setItem('AgreementName',formik.values.vehicleType+'Stamp Agreement')
   }
 console.log(isNullish)
+// const [isButtonDisable, setisButtonDisable] = useState(true)
+// useEffect(()=>{
+//   if(formik.values==='')
+//     {
+//     setisButtonDisable(false)
+//   }
+//   else{
+//     setisButtonDisable(true)
+//   }
+  
+//   },[formik.values.FirstPartyName])
   return (
 
     <>{

@@ -12,7 +12,19 @@ export const showToastf= (e)=>{
         theme:'dark',
         position:"top-center",
       })}
+      export const showToastDisplay1= ()=>{
+        // e.preventDefault(
+        toast('Document Sent Successfully!',{
+          theme:'dark',
+          position:"top-center",
+        })}
 
+        export const NotificationToast= ()=>{
+          // e.preventDefault(
+          toast('User Not found!Please enter a valid public key',{
+            theme:'dark',
+            position:"top-center",
+          })}
   export const paymentToast = ()=>{
     toast('Payment Recieved Successfully!',{
       theme:'dark',

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BiArrowToRight } from "react-icons/bi";
 import UserImg from "../../images/man.png";
@@ -23,27 +23,6 @@ const UserSignup = () => {
     setVisible(true);
   };
   const [formData, setFormData] = useState({});
-  // const handleChanger = (event) => {
-  //   const { name, value } = event.target;
-
-  //   setFormData({ ...formData, [name]: value });
-  //   // console.log(formData)
-  // };
-
-  // const getData = async (event)=>{
-  //   event.preventDefault();   try{
-  //   const res=await axios.post('/api/v1/users/signup',formData)
-  //   if(res.data.status ==="success"){
-  //   VisibileVerificationForm();
-
-  //   }
-
-  //  }
-  //  catch(error){
-  //    alert(error)
-  //  }
-  // }
-
   const validate = yup.object().shape({
     firstName: yup
       .string()
@@ -74,36 +53,22 @@ const UserSignup = () => {
     },
     validationSchema: validate,
   });
+
+  const [isButtonDisable, setisButtonDisable] = useState(true)
+
+  useEffect(()=>{
+  if(!formik.values==='')
+    {
+    setisButtonDisable(false)
+  }
+  else{
+    setisButtonDisable(true)
+  }
+  
+  },[formik.values.firstName, formik.values.lastName,formik.values.email, formik.values.password ,formik.values.passwordConfirm
+  ])
   return (
-    // <Formik
-    //   initialValues={{
-    //     firstName: "",
-    //     lastName: "",
-    //     email: "",
-    //     password: "",
-    //     passwordConfirm: "",
-    //   }}
-    //   validate={(values) => {
-    //     const errors = {};
-    //     if (!values.email) {
-    //       errors.email = "Required";
-    //     } else if (
-    //       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-    //     ) {
-    //       errors.email = "Invalid email address";
-    //     }
-    //     return errors;
-    //   }}
-    //   validationSchema={validate}
-    // >
-    //   {({
-    //     values,
-    //     errors,
-    //     touched,
-    //     // handleChange,
-    //     // handleBlur,
-    //     // handleSubmit,
-    //   }) => (
+   
     <>
       {!Visible && (
         <div className="user-signup-img">
@@ -286,12 +251,14 @@ const UserSignup = () => {
                 <button
                   onClick={visibility}
                   className={
-                    Object.keys(formik.values).length !== 0 &&
-                    Object.keys(formik.errors).length === 0
-                      ? "btn-signup"
-                      : "btn-signup btn-disabled"
+                    // Object.keys(formik.values).length !== 0 &&
+                    // Object.keys(formik.errors).length === 0
+                      "btn-signup"
+                      // : "btn-signup btn-disabled"
                   }
+                  disabled={isButtonDisable}
                 >
+                  
                   Next
                   <BiArrowToRight />
                 </button>

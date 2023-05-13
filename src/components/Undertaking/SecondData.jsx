@@ -1,11 +1,12 @@
-import React from 'react'
-import { sendNotification } from '../../ApiService/NotificationFunction';
+import React,{useState} from 'react'
+import { sendNotification,sendNoti1 } from '../../ApiService/NotificationFunction';
 import { ToastContainer } from 'react-toastify'
 import { showToastf } from '../../ApiService/ToastDisplay';
 import { LawyerSign } from '../../ApiService/LawyerSignature';
 import { useNavigate } from 'react-router-dom';
 
 const SecondData = (props) => {
+  const [readable,setReadable] = useState(false)
   let navigate = useNavigate();
   const values = localStorage.getItem('values')
   const publicKey = localStorage.getItem('public')
@@ -164,15 +165,17 @@ console.log('details',details)
               </div>
               <div className="col-md-3">
                 <button className="signatureBtn"
-                 onClick={(e)=>{
-                  e.preventDefault();
-                  LawyerSign();
-                }}
-                // onClick={(e)=>{
+                //  onClick={(e)=>{
                 //   e.preventDefault();
-                //   sendNotification("Vehicle Stamp Agreement","049895b54f3159ae7b8e44f8f5351491d414aa0be5f48864d8d62a1afa698d1ad1b5053e150790eede49e21c55537a529dfebae4c4ca47a2e1da69a873cbffd07e",details)
-
+                //   LawyerSign();
                 // }}
+                onClick={(e)=>{
+                  e.preventDefault()
+                  setTimeout(() => {
+                  sendNoti1(details,setReadable)
+                    
+                  }, 3000);
+                  }}
                 >Sign</button>
               </div>
             </div>

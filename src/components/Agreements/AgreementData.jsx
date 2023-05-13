@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { emailCheck,emailCheck2} from '../../ApiService/WitnessSignature';
 import { LawyerSign } from '../../ApiService/LawyerSignature';
 import { buyerChange,witnessChange1,witnessChange2,lawyerChange } from '../../ApiService/HandleChanges';
+import { useFormik } from 'formik';
 // import Toast from '../../Toast/Toast';
 const AgreementData = (props) => {
   let navigate = useNavigate();
@@ -29,7 +30,15 @@ console.log('details',details)
 
     }, 2000);
        
-
+    const formik = useFormik({
+      initialValues: {
+      sender:'',
+      buyer:"",
+      witness1:'',
+      witness2:"",
+      lawyer:''
+      }
+    });
 
   return (
     <>
@@ -236,7 +245,7 @@ console.log('details',details)
                   id="SignatureInputs"
                   type="text"
                   name='buyer'
-                  onChange={(e)=>{buyerChange(e,setsign)}}
+                  onChange={formik.handleChange}
                   readOnly={readable}
                 />
                 <br />
@@ -244,23 +253,24 @@ console.log('details',details)
               <div className="col-md-3"> 
                 <button 
                 className="signatureBtn"
-                disabled={!sign}
-                // onClick={(e)=>{
-                //   e.preventDefault()
-                //   setTimeout(() => {
-                //   sendNoti1(details,setReadable)
-                    
-                //   }, 3000);
-                //   }}
-                // disabled={!clicked}
+                disabled={!formik.values.buyer}
                 onClick={(e)=>{
-                  e.preventDefault();
+                  e.preventDefault()
                   setTimeout(() => {
-                  sendNotification("Vehicle Stamp Agreement",sign.value,details,setReadable)
+                  sendNoti1(details,setReadable)
                     
                   }, 3000);
+                  }}
+                // disabled={!clicked}
+                // onClick={(e)=>{
+                //   e.preventDefault();
+                //   setTimeout(() => {
+                //     console.log(sign,'sfaf')
+                //   sendNotification("Vehicle Stamp Agreement",formik.values.buyer,details,setReadable)
+                //     console.log('buyer',formik.values.buyer)
+                //   }, 3000);
 
-                }}
+                // }}
                 >Send</button>
                             
 
@@ -282,27 +292,36 @@ console.log('details',details)
                   id="SignatureInputs"
                   type="text"
                   placeholder="You can also write email address of witness"
-                  name='w1'
+                  name='witness1'
                   readOnly={readableWit1}
-                  onChange={(e)=>{
-                    witnessChange1(e,setwsign)
-                  }}
+                  onChange={
+                    // witnessChange1(e,setwsign)
+                    formik.handleChange
+                  }
                 />
                 <br />
               </div>
               <div className="col-md-3">
                 <button 
                 className="signatureBtn"
-                disabled={!wsign}
+                disabled={!formik.values.witness1}
+                // onClick={(e)=>{
+                //   e.preventDefault()
+                //   setTimeout(() => {
+                //   emailCheck(formik.values.witness1)
+                    
+                //   }, 3000);
+                // }}
                 onClick={(e)=>{
                   e.preventDefault()
-                  
-                  emailCheck(wsign)
-                }}
-
+                  setTimeout(() => {
+                  sendNoti1(details,setReadable)
+                    
+                  }, 3000);
+                  }}
                 // onClick={(e)=>{
                 //   e.preventDefault();
-                //   // sendNotification("Vehicle Stamp Agreement",wsign.value,details,setReadableWit1)
+                //   sendNotification("Vehicle Stamp Agreement",formik.values.witness1,details,setReadableWit1)
                 //   // sendNoti1(details,setReadable)
 
                 // }}
@@ -325,26 +344,31 @@ console.log('details',details)
                   className="tempInputs"
                   id="SignatureInputs"
                   type="text"
+                  name='witness2'
                   placeholder="You can also write email address of witness"
                   readOnly={readableWit2}
-                  onChange={(e)=>{
-                    witnessChange2(e,setwsign2)
-                  }}
+                  onChange={formik.handleChange}
                 />
                 <br />
               </div>
               <div className="col-md-3">
                 <button 
                 className="signatureBtn"
-                disabled={!wsign2}
-                onClick={(e)=>{
-                  e.preventDefault();
-                  emailCheck2(wsign2)
-                }}
-
+                disabled={!formik.values.witness2}
                 // onClick={(e)=>{
                 //   e.preventDefault();
-                //   sendNotification("Vehicle Stamp Agreement",wsign2.value,details,setReadableWit2)
+                //   emailCheck2(formik.values.witness2)
+                // }}
+                onClick={(e)=>{
+                  e.preventDefault()
+                  setTimeout(() => {
+                  sendNoti1(details,setReadable)
+                    
+                  }, 3000);
+                  }}
+                // onClick={(e)=>{
+                //   e.preventDefault();
+                //   sendNotification("Vehicle Stamp Agreement",formik.values.witness2,details,setReadableWit2)
 
                 //   // sendNotification(publicKey)
                 // }}
@@ -363,26 +387,32 @@ console.log('details',details)
                   className="tempInputs"
                   id="SignatureInputs"
                   type="text"
+                  name='lawyer'
                   readOnly={readableLawyer}
-                  onChange={(e)=>{
-                    lawyerChange(e,setlsign)
-                  }}
+                  onChange={formik.handleChange}
                 />
                 <br />
               </div>
               <div className="col-md-3">
                 <button 
                 className="signatureBtn"
-                disabled={!lsign}
-                onClick={(e)=>{
-                  e.preventDefault();
-                  LawyerSign(setReadableLawyer);
-                }}
+                disabled={!formik.values.lawyer}
+                // onClick={(e)=>{
+                //   e.preventDefault();
+                //   LawyerSign(setReadableLawyer);
+                // }}
 
                 // onClick={(e)=>{
                 //   e.preventDefault();
-                //   sendNotification("Vehicle Stamp Agreement",lsign.value,details,setReadableLawyer)
+                //   sendNotification("Vehicle Stamp Agreement",formik.values.lawyer,details,setReadableLawyer)
                 // }}
+                onClick={(e)=>{
+                  e.preventDefault()
+                  setTimeout(() => {
+                  sendNoti1(details,setReadable)
+                    
+                  }, 3000);
+                  }}
                 >Send</button>
               </div>
             </div>

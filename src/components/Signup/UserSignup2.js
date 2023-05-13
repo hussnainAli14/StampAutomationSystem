@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 const UserSignup2 = (props) => {
  
   let location = useLocation();
+  const [isButtonDisable, setisButtonDisable] = useState(true)
   const [hideVerificationForm, sethideVerificationForm] = useState(true);
 const[loading,setLoading] =  useState(false)
 // let totalData={};
@@ -86,6 +87,18 @@ console.log(formik.values)
      console.log("data",error)
    }
   }
+
+  useEffect(()=>{
+    if(!formik.values==='')
+      {
+      setisButtonDisable(false)
+    }
+    else{
+      setisButtonDisable(true)
+    }
+    
+    },[formik.values.cnic, formik.values.address,formik.values.gender])
+
   return (
     <>
       

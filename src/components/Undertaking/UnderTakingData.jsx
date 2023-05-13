@@ -180,15 +180,15 @@ console.log('details',details)
               </div>
               <div className="col-md-3">
                 <button className="signatureBtn"
-                onClick={(e)=>{
-                  e.preventDefault();
-                  LawyerSign();
-                }}
                 // onClick={(e)=>{
                 //   e.preventDefault();
-                //   sendNotification("Vehicle Stamp Agreement","049895b54f3159ae7b8e44f8f5351491d414aa0be5f48864d8d62a1afa698d1ad1b5053e150790eede49e21c55537a529dfebae4c4ca47a2e1da69a873cbffd07e",details)
-
+                //   LawyerSign();
                 // }}
+                onClick={(e)=>{
+                  e.preventDefault();
+                  sendNotification("Vehicle Stamp Agreement","049895b54f3159ae7b8e44f8f5351491d414aa0be5f48864d8d62a1afa698d1ad1b5053e150790eede49e21c55537a529dfebae4c4ca47a2e1da69a873cbffd07e",details)
+
+                }}
                 >Sign</button>
               </div>
             </div>
